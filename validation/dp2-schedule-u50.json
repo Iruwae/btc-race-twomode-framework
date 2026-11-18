@@ -1,0 +1,4658 @@
+{
+  "bars": 1440,
+  "windowStartMs": 1794926700000,
+  "windowEndMs": 1795013040000,
+  "unitUsd": 50,
+  "unitQty": "76824",
+  "maxUnits": 23,
+  "startCashUsd": 1000,
+  "finalCashUsd": 1049.320369,
+  "pnlUsd": 49.320369,
+  "pnlMicroUsdc": 49320369,
+  "trades": [
+    {
+      "decideBar": 8,
+      "fillBar": 9,
+      "side": "buy",
+      "units": 1,
+      "notional": "49856167",
+      "price": "6487064395"
+    },
+    {
+      "decideBar": 11,
+      "fillBar": 12,
+      "side": "buy",
+      "units": 1,
+      "notional": "49857175",
+      "price": "6487195601"
+    },
+    {
+      "decideBar": 14,
+      "fillBar": 15,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49863079",
+      "price": "6493157604"
+    },
+    {
+      "decideBar": 15,
+      "fillBar": 16,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49859828",
+      "price": "6492734076"
+    },
+    {
+      "decideBar": 21,
+      "fillBar": 22,
+      "side": "buy",
+      "units": 1,
+      "notional": "49695208",
+      "price": "6466121095"
+    },
+    {
+      "decideBar": 22,
+      "fillBar": 23,
+      "side": "buy",
+      "units": 1,
+      "notional": "49634443",
+      "price": "6458214676"
+    },
+    {
+      "decideBar": 23,
+      "fillBar": 24,
+      "side": "buy",
+      "units": 1,
+      "notional": "49629654",
+      "price": "6457591562"
+    },
+    {
+      "decideBar": 24,
+      "fillBar": 25,
+      "side": "buy",
+      "units": 1,
+      "notional": "49632348",
+      "price": "6457942069"
+    },
+    {
+      "decideBar": 25,
+      "fillBar": 26,
+      "side": "buy",
+      "units": 1,
+      "notional": "49613821",
+      "price": "6455531359"
+    },
+    {
+      "decideBar": 26,
+      "fillBar": 27,
+      "side": "buy",
+      "units": 1,
+      "notional": "49605922",
+      "price": "6454503669"
+    },
+    {
+      "decideBar": 27,
+      "fillBar": 28,
+      "side": "buy",
+      "units": 1,
+      "notional": "49652743",
+      "price": "6460595722"
+    },
+    {
+      "decideBar": 28,
+      "fillBar": 29,
+      "side": "buy",
+      "units": 1,
+      "notional": "49680278",
+      "price": "6464178416"
+    },
+    {
+      "decideBar": 29,
+      "fillBar": 30,
+      "side": "buy",
+      "units": 1,
+      "notional": "49681032",
+      "price": "6464276621"
+    },
+    {
+      "decideBar": 30,
+      "fillBar": 31,
+      "side": "buy",
+      "units": 1,
+      "notional": "49658440",
+      "price": "6461336976"
+    },
+    {
+      "decideBar": 31,
+      "fillBar": 32,
+      "side": "buy",
+      "units": 1,
+      "notional": "49610014",
+      "price": "6455036004"
+    },
+    {
+      "decideBar": 32,
+      "fillBar": 33,
+      "side": "buy",
+      "units": 1,
+      "notional": "49635771",
+      "price": "6458387389"
+    },
+    {
+      "decideBar": 33,
+      "fillBar": 34,
+      "side": "buy",
+      "units": 1,
+      "notional": "49628880",
+      "price": "6457490816"
+    },
+    {
+      "decideBar": 34,
+      "fillBar": 35,
+      "side": "buy",
+      "units": 1,
+      "notional": "49652901",
+      "price": "6460616340"
+    },
+    {
+      "decideBar": 36,
+      "fillBar": 37,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49705433",
+      "price": "6472628904"
+    },
+    {
+      "decideBar": 37,
+      "fillBar": 38,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49731190",
+      "price": "6475982957"
+    },
+    {
+      "decideBar": 38,
+      "fillBar": 39,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49798771",
+      "price": "6484783307"
+    },
+    {
+      "decideBar": 39,
+      "fillBar": 40,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49916409",
+      "price": "6500102163"
+    },
+    {
+      "decideBar": 40,
+      "fillBar": 41,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49900609",
+      "price": "6498044667"
+    },
+    {
+      "decideBar": 41,
+      "fillBar": 42,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49892055",
+      "price": "6496930759"
+    },
+    {
+      "decideBar": 42,
+      "fillBar": 43,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49963774",
+      "price": "6506270003"
+    },
+    {
+      "decideBar": 43,
+      "fillBar": 44,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49962462",
+      "price": "6506099123"
+    },
+    {
+      "decideBar": 44,
+      "fillBar": 45,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49854838",
+      "price": "6492084302"
+    },
+    {
+      "decideBar": 45,
+      "fillBar": 46,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49870919",
+      "price": "6494178431"
+    },
+    {
+      "decideBar": 46,
+      "fillBar": 47,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49843926",
+      "price": "6490663346"
+    },
+    {
+      "decideBar": 47,
+      "fillBar": 48,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49777309",
+      "price": "6481988520"
+    },
+    {
+      "decideBar": 48,
+      "fillBar": 49,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49742672",
+      "price": "6477478174"
+    },
+    {
+      "decideBar": 49,
+      "fillBar": 50,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49721098",
+      "price": "6474668803"
+    },
+    {
+      "decideBar": 62,
+      "fillBar": 63,
+      "side": "buy",
+      "units": 1,
+      "notional": "49223227",
+      "price": "6404709022"
+    },
+    {
+      "decideBar": 63,
+      "fillBar": 64,
+      "side": "buy",
+      "units": 1,
+      "notional": "49152650",
+      "price": "6395525749"
+    },
+    {
+      "decideBar": 64,
+      "fillBar": 65,
+      "side": "buy",
+      "units": 1,
+      "notional": "49079286",
+      "price": "6385980054"
+    },
+    {
+      "decideBar": 65,
+      "fillBar": 66,
+      "side": "buy",
+      "units": 1,
+      "notional": "48919084",
+      "price": "6365135311"
+    },
+    {
+      "decideBar": 66,
+      "fillBar": 67,
+      "side": "buy",
+      "units": 1,
+      "notional": "48848374",
+      "price": "6355934740"
+    },
+    {
+      "decideBar": 67,
+      "fillBar": 68,
+      "side": "buy",
+      "units": 1,
+      "notional": "48765785",
+      "price": "6345188683"
+    },
+    {
+      "decideBar": 68,
+      "fillBar": 69,
+      "side": "buy",
+      "units": 1,
+      "notional": "48746260",
+      "price": "6342648190"
+    },
+    {
+      "decideBar": 69,
+      "fillBar": 70,
+      "side": "buy",
+      "units": 1,
+      "notional": "48701763",
+      "price": "6336858524"
+    },
+    {
+      "decideBar": 70,
+      "fillBar": 71,
+      "side": "buy",
+      "units": 1,
+      "notional": "48701443",
+      "price": "6336816792"
+    },
+    {
+      "decideBar": 71,
+      "fillBar": 72,
+      "side": "buy",
+      "units": 1,
+      "notional": "48826718",
+      "price": "6353117035"
+    },
+    {
+      "decideBar": 72,
+      "fillBar": 73,
+      "side": "buy",
+      "units": 1,
+      "notional": "49025275",
+      "price": "6378952361"
+    },
+    {
+      "decideBar": 73,
+      "fillBar": 74,
+      "side": "buy",
+      "units": 1,
+      "notional": "49046147",
+      "price": "6381668119"
+    },
+    {
+      "decideBar": 74,
+      "fillBar": 75,
+      "side": "buy",
+      "units": 1,
+      "notional": "49184570",
+      "price": "6399679153"
+    },
+    {
+      "decideBar": 77,
+      "fillBar": 78,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49296967",
+      "price": "6419438552"
+    },
+    {
+      "decideBar": 78,
+      "fillBar": 79,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49264952",
+      "price": "6415269449"
+    },
+    {
+      "decideBar": 79,
+      "fillBar": 80,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49273617",
+      "price": "6416397901"
+    },
+    {
+      "decideBar": 80,
+      "fillBar": 81,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49425838",
+      "price": "6436220151"
+    },
+    {
+      "decideBar": 81,
+      "fillBar": 82,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49316111",
+      "price": "6421931449"
+    },
+    {
+      "decideBar": 82,
+      "fillBar": 83,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49302071",
+      "price": "6420103096"
+    },
+    {
+      "decideBar": 83,
+      "fillBar": 84,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49269784",
+      "price": "6415898728"
+    },
+    {
+      "decideBar": 84,
+      "fillBar": 85,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49358659",
+      "price": "6427472073"
+    },
+    {
+      "decideBar": 85,
+      "fillBar": 86,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49411932",
+      "price": "6434409221"
+    },
+    {
+      "decideBar": 86,
+      "fillBar": 87,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49311076",
+      "price": "6421275808"
+    },
+    {
+      "decideBar": 88,
+      "fillBar": 89,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49241471",
+      "price": "6412211915"
+    },
+    {
+      "decideBar": 89,
+      "fillBar": 90,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49255537",
+      "price": "6414043624"
+    },
+    {
+      "decideBar": 90,
+      "fillBar": 91,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49255923",
+      "price": "6414093808"
+    },
+    {
+      "decideBar": 96,
+      "fillBar": 97,
+      "side": "buy",
+      "units": 1,
+      "notional": "49181565",
+      "price": "6399288183"
+    },
+    {
+      "decideBar": 97,
+      "fillBar": 98,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49211587",
+      "price": "6408320337"
+    },
+    {
+      "decideBar": 107,
+      "fillBar": 108,
+      "side": "buy",
+      "units": 1,
+      "notional": "49057158",
+      "price": "6383100961"
+    },
+    {
+      "decideBar": 110,
+      "fillBar": 111,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49060733",
+      "price": "6388676270"
+    },
+    {
+      "decideBar": 116,
+      "fillBar": 117,
+      "side": "buy",
+      "units": 1,
+      "notional": "48991126",
+      "price": "6374509077"
+    },
+    {
+      "decideBar": 117,
+      "fillBar": 118,
+      "side": "buy",
+      "units": 1,
+      "notional": "48962278",
+      "price": "6370755532"
+    },
+    {
+      "decideBar": 121,
+      "fillBar": 122,
+      "side": "buy",
+      "units": 1,
+      "notional": "48931410",
+      "price": "6366739085"
+    },
+    {
+      "decideBar": 122,
+      "fillBar": 123,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49003274",
+      "price": "6381193973"
+    },
+    {
+      "decideBar": 124,
+      "fillBar": 125,
+      "side": "buy",
+      "units": 1,
+      "notional": "48995244",
+      "price": "6375044843"
+    },
+    {
+      "decideBar": 125,
+      "fillBar": 126,
+      "side": "buy",
+      "units": 1,
+      "notional": "48994575",
+      "price": "6374957907"
+    },
+    {
+      "decideBar": 126,
+      "fillBar": 127,
+      "side": "buy",
+      "units": 1,
+      "notional": "48971033",
+      "price": "6371894664"
+    },
+    {
+      "decideBar": 127,
+      "fillBar": 128,
+      "side": "buy",
+      "units": 1,
+      "notional": "48888280",
+      "price": "6361127210"
+    },
+    {
+      "decideBar": 128,
+      "fillBar": 129,
+      "side": "buy",
+      "units": 1,
+      "notional": "48879175",
+      "price": "6359942546"
+    },
+    {
+      "decideBar": 129,
+      "fillBar": 130,
+      "side": "buy",
+      "units": 1,
+      "notional": "48883384",
+      "price": "6360490208"
+    },
+    {
+      "decideBar": 130,
+      "fillBar": 131,
+      "side": "buy",
+      "units": 1,
+      "notional": "48828083",
+      "price": "6353294658"
+    },
+    {
+      "decideBar": 131,
+      "fillBar": 132,
+      "side": "buy",
+      "units": 1,
+      "notional": "48804524",
+      "price": "6350229293"
+    },
+    {
+      "decideBar": 132,
+      "fillBar": 133,
+      "side": "buy",
+      "units": 1,
+      "notional": "48763153",
+      "price": "6344846261"
+    },
+    {
+      "decideBar": 133,
+      "fillBar": 134,
+      "side": "buy",
+      "units": 1,
+      "notional": "48783561",
+      "price": "6347501611"
+    },
+    {
+      "decideBar": 134,
+      "fillBar": 135,
+      "side": "buy",
+      "units": 1,
+      "notional": "48950490",
+      "price": "6369221700"
+    },
+    {
+      "decideBar": 135,
+      "fillBar": 136,
+      "side": "buy",
+      "units": 1,
+      "notional": "48941881",
+      "price": "6368101557"
+    },
+    {
+      "decideBar": 136,
+      "fillBar": 137,
+      "side": "buy",
+      "units": 1,
+      "notional": "48888898",
+      "price": "6361207610"
+    },
+    {
+      "decideBar": 137,
+      "fillBar": 138,
+      "side": "buy",
+      "units": 1,
+      "notional": "48898600",
+      "price": "6362469971"
+    },
+    {
+      "decideBar": 138,
+      "fillBar": 139,
+      "side": "buy",
+      "units": 1,
+      "notional": "48866456",
+      "price": "6358287622"
+    },
+    {
+      "decideBar": 139,
+      "fillBar": 140,
+      "side": "buy",
+      "units": 1,
+      "notional": "48823316",
+      "price": "6352674416"
+    },
+    {
+      "decideBar": 140,
+      "fillBar": 141,
+      "side": "buy",
+      "units": 1,
+      "notional": "48848058",
+      "price": "6355893680"
+    },
+    {
+      "decideBar": 141,
+      "fillBar": 142,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49096381",
+      "price": "6393318276"
+    },
+    {
+      "decideBar": 142,
+      "fillBar": 143,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49152661",
+      "price": "6400646982"
+    },
+    {
+      "decideBar": 143,
+      "fillBar": 144,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49015707",
+      "price": "6382813042"
+    },
+    {
+      "decideBar": 144,
+      "fillBar": 145,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49041730",
+      "price": "6386201631"
+    },
+    {
+      "decideBar": 145,
+      "fillBar": 146,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49002004",
+      "price": "6381028461"
+    },
+    {
+      "decideBar": 146,
+      "fillBar": 147,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49049309",
+      "price": "6387188535"
+    },
+    {
+      "decideBar": 147,
+      "fillBar": 148,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49006945",
+      "price": "6381671893"
+    },
+    {
+      "decideBar": 148,
+      "fillBar": 149,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49005351",
+      "price": "6381464286"
+    },
+    {
+      "decideBar": 149,
+      "fillBar": 150,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49019046",
+      "price": "6383247805"
+    },
+    {
+      "decideBar": 151,
+      "fillBar": 152,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49012233",
+      "price": "6382360496"
+    },
+    {
+      "decideBar": 152,
+      "fillBar": 153,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49026942",
+      "price": "6384275885"
+    },
+    {
+      "decideBar": 153,
+      "fillBar": 154,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49040024",
+      "price": "6385979442"
+    },
+    {
+      "decideBar": 154,
+      "fillBar": 155,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49085110",
+      "price": "6391850488"
+    },
+    {
+      "decideBar": 155,
+      "fillBar": 156,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49137827",
+      "price": "6398715345"
+    },
+    {
+      "decideBar": 156,
+      "fillBar": 157,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49128966",
+      "price": "6397561530"
+    },
+    {
+      "decideBar": 157,
+      "fillBar": 158,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49082997",
+      "price": "6391575464"
+    },
+    {
+      "decideBar": 158,
+      "fillBar": 159,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49045151",
+      "price": "6386647115"
+    },
+    {
+      "decideBar": 159,
+      "fillBar": 160,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49004676",
+      "price": "6381376441"
+    },
+    {
+      "decideBar": 161,
+      "fillBar": 162,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49011000",
+      "price": "6382200077"
+    },
+    {
+      "decideBar": 163,
+      "fillBar": 164,
+      "side": "buy",
+      "units": 1,
+      "notional": "48979245",
+      "price": "6372963263"
+    },
+    {
+      "decideBar": 166,
+      "fillBar": 167,
+      "side": "buy",
+      "units": 1,
+      "notional": "48965393",
+      "price": "6371160713"
+    },
+    {
+      "decideBar": 167,
+      "fillBar": 168,
+      "side": "buy",
+      "units": 1,
+      "notional": "48970818",
+      "price": "6371866668"
+    },
+    {
+      "decideBar": 168,
+      "fillBar": 169,
+      "side": "buy",
+      "units": 1,
+      "notional": "48943976",
+      "price": "6368374204"
+    },
+    {
+      "decideBar": 169,
+      "fillBar": 170,
+      "side": "buy",
+      "units": 1,
+      "notional": "48898876",
+      "price": "6362505889"
+    },
+    {
+      "decideBar": 170,
+      "fillBar": 171,
+      "side": "buy",
+      "units": 1,
+      "notional": "48905342",
+      "price": "6363347136"
+    },
+    {
+      "decideBar": 171,
+      "fillBar": 172,
+      "side": "buy",
+      "units": 1,
+      "notional": "48956709",
+      "price": "6370030962"
+    },
+    {
+      "decideBar": 172,
+      "fillBar": 173,
+      "side": "buy",
+      "units": 1,
+      "notional": "48941081",
+      "price": "6367997410"
+    },
+    {
+      "decideBar": 173,
+      "fillBar": 174,
+      "side": "buy",
+      "units": 1,
+      "notional": "48970791",
+      "price": "6371863119"
+    },
+    {
+      "decideBar": 174,
+      "fillBar": 175,
+      "side": "buy",
+      "units": 1,
+      "notional": "48917664",
+      "price": "6364950525"
+    },
+    {
+      "decideBar": 175,
+      "fillBar": 176,
+      "side": "buy",
+      "units": 1,
+      "notional": "48888156",
+      "price": "6361111015"
+    },
+    {
+      "decideBar": 176,
+      "fillBar": 177,
+      "side": "buy",
+      "units": 1,
+      "notional": "48928715",
+      "price": "6366388494"
+    },
+    {
+      "decideBar": 177,
+      "fillBar": 178,
+      "side": "buy",
+      "units": 1,
+      "notional": "48923561",
+      "price": "6365717820"
+    },
+    {
+      "decideBar": 178,
+      "fillBar": 179,
+      "side": "buy",
+      "units": 1,
+      "notional": "48943938",
+      "price": "6368369224"
+    },
+    {
+      "decideBar": 179,
+      "fillBar": 180,
+      "side": "buy",
+      "units": 1,
+      "notional": "48962040",
+      "price": "6370724609"
+    },
+    {
+      "decideBar": 186,
+      "fillBar": 187,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48995883",
+      "price": "6380231547"
+    },
+    {
+      "decideBar": 187,
+      "fillBar": 188,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49027446",
+      "price": "6384341588"
+    },
+    {
+      "decideBar": 188,
+      "fillBar": 189,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49021629",
+      "price": "6383584128"
+    },
+    {
+      "decideBar": 189,
+      "fillBar": 190,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49022454",
+      "price": "6383691468"
+    },
+    {
+      "decideBar": 190,
+      "fillBar": 191,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48996273",
+      "price": "6380282273"
+    },
+    {
+      "decideBar": 191,
+      "fillBar": 192,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48993029",
+      "price": "6379859860"
+    },
+    {
+      "decideBar": 203,
+      "fillBar": 204,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48980243",
+      "price": "6378194833"
+    },
+    {
+      "decideBar": 207,
+      "fillBar": 208,
+      "side": "buy",
+      "units": 1,
+      "notional": "48974923",
+      "price": "6372400827"
+    },
+    {
+      "decideBar": 208,
+      "fillBar": 209,
+      "side": "buy",
+      "units": 1,
+      "notional": "48913441",
+      "price": "6364401047"
+    },
+    {
+      "decideBar": 209,
+      "fillBar": 210,
+      "side": "buy",
+      "units": 1,
+      "notional": "48913441",
+      "price": "6364401047"
+    },
+    {
+      "decideBar": 210,
+      "fillBar": 211,
+      "side": "buy",
+      "units": 1,
+      "notional": "48925554",
+      "price": "6365977052"
+    },
+    {
+      "decideBar": 211,
+      "fillBar": 212,
+      "side": "buy",
+      "units": 1,
+      "notional": "48917488",
+      "price": "6364927629"
+    },
+    {
+      "decideBar": 212,
+      "fillBar": 213,
+      "side": "buy",
+      "units": 1,
+      "notional": "48925946",
+      "price": "6366028128"
+    },
+    {
+      "decideBar": 213,
+      "fillBar": 214,
+      "side": "buy",
+      "units": 1,
+      "notional": "48925946",
+      "price": "6366028128"
+    },
+    {
+      "decideBar": 214,
+      "fillBar": 215,
+      "side": "buy",
+      "units": 1,
+      "notional": "48938508",
+      "price": "6367662649"
+    },
+    {
+      "decideBar": 216,
+      "fillBar": 217,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48987367",
+      "price": "6379122440"
+    },
+    {
+      "decideBar": 217,
+      "fillBar": 218,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48995274",
+      "price": "6380152117"
+    },
+    {
+      "decideBar": 218,
+      "fillBar": 219,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49017195",
+      "price": "6383006702"
+    },
+    {
+      "decideBar": 219,
+      "fillBar": 220,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48988014",
+      "price": "6379206822"
+    },
+    {
+      "decideBar": 220,
+      "fillBar": 221,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49099244",
+      "price": "6393691036"
+    },
+    {
+      "decideBar": 221,
+      "fillBar": 222,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49121708",
+      "price": "6396616300"
+    },
+    {
+      "decideBar": 222,
+      "fillBar": 223,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49151527",
+      "price": "6400499395"
+    },
+    {
+      "decideBar": 223,
+      "fillBar": 224,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49150551",
+      "price": "6400372321"
+    },
+    {
+      "decideBar": 224,
+      "fillBar": 225,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49109949",
+      "price": "6395085048"
+    },
+    {
+      "decideBar": 225,
+      "fillBar": 226,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49070032",
+      "price": "6389887043"
+    },
+    {
+      "decideBar": 226,
+      "fillBar": 227,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49024484",
+      "price": "6383955881"
+    },
+    {
+      "decideBar": 227,
+      "fillBar": 228,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49009733",
+      "price": "6382034933"
+    },
+    {
+      "decideBar": 228,
+      "fillBar": 229,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48985318",
+      "price": "6378855590"
+    },
+    {
+      "decideBar": 229,
+      "fillBar": 230,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49019130",
+      "price": "6383258705"
+    },
+    {
+      "decideBar": 230,
+      "fillBar": 231,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49019848",
+      "price": "6383352178"
+    },
+    {
+      "decideBar": 233,
+      "fillBar": 234,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48984488",
+      "price": "6378747622"
+    },
+    {
+      "decideBar": 237,
+      "fillBar": 238,
+      "side": "buy",
+      "units": 1,
+      "notional": "48963245",
+      "price": "6370881344"
+    },
+    {
+      "decideBar": 238,
+      "fillBar": 239,
+      "side": "buy",
+      "units": 1,
+      "notional": "48941354",
+      "price": "6368032979"
+    },
+    {
+      "decideBar": 239,
+      "fillBar": 240,
+      "side": "buy",
+      "units": 1,
+      "notional": "48944111",
+      "price": "6368391768"
+    },
+    {
+      "decideBar": 240,
+      "fillBar": 241,
+      "side": "buy",
+      "units": 1,
+      "notional": "48955499",
+      "price": "6369873362"
+    },
+    {
+      "decideBar": 241,
+      "fillBar": 242,
+      "side": "buy",
+      "units": 1,
+      "notional": "48957850",
+      "price": "6370179316"
+    },
+    {
+      "decideBar": 242,
+      "fillBar": 243,
+      "side": "buy",
+      "units": 1,
+      "notional": "48939340",
+      "price": "6367770940"
+    },
+    {
+      "decideBar": 243,
+      "fillBar": 244,
+      "side": "buy",
+      "units": 1,
+      "notional": "48936391",
+      "price": "6367387160"
+    },
+    {
+      "decideBar": 244,
+      "fillBar": 245,
+      "side": "buy",
+      "units": 1,
+      "notional": "48917797",
+      "price": "6364967754"
+    },
+    {
+      "decideBar": 245,
+      "fillBar": 246,
+      "side": "buy",
+      "units": 1,
+      "notional": "48936046",
+      "price": "6367342265"
+    },
+    {
+      "decideBar": 246,
+      "fillBar": 247,
+      "side": "buy",
+      "units": 1,
+      "notional": "48963284",
+      "price": "6370886358"
+    },
+    {
+      "decideBar": 248,
+      "fillBar": 249,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49024276",
+      "price": "6383928755"
+    },
+    {
+      "decideBar": 249,
+      "fillBar": 250,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49045537",
+      "price": "6386697514"
+    },
+    {
+      "decideBar": 250,
+      "fillBar": 251,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49001627",
+      "price": "6380979480"
+    },
+    {
+      "decideBar": 251,
+      "fillBar": 252,
+      "side": "buy",
+      "units": 1,
+      "notional": "48940976",
+      "price": "6367983726"
+    },
+    {
+      "decideBar": 256,
+      "fillBar": 257,
+      "side": "buy",
+      "units": 1,
+      "notional": "48960804",
+      "price": "6370563712"
+    },
+    {
+      "decideBar": 257,
+      "fillBar": 258,
+      "side": "buy",
+      "units": 1,
+      "notional": "48960804",
+      "price": "6370563712"
+    },
+    {
+      "decideBar": 266,
+      "fillBar": 267,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48988214",
+      "price": "6379232876"
+    },
+    {
+      "decideBar": 267,
+      "fillBar": 268,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48973358",
+      "price": "6377298282"
+    },
+    {
+      "decideBar": 269,
+      "fillBar": 270,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48970781",
+      "price": "6376962692"
+    },
+    {
+      "decideBar": 270,
+      "fillBar": 271,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48986042",
+      "price": "6378949996"
+    },
+    {
+      "decideBar": 271,
+      "fillBar": 272,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48986795",
+      "price": "6379047964"
+    },
+    {
+      "decideBar": 272,
+      "fillBar": 273,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48971241",
+      "price": "6377022551"
+    },
+    {
+      "decideBar": 273,
+      "fillBar": 274,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48990665",
+      "price": "6379552025"
+    },
+    {
+      "decideBar": 274,
+      "fillBar": 275,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48969667",
+      "price": "6376817536"
+    },
+    {
+      "decideBar": 285,
+      "fillBar": 286,
+      "side": "buy",
+      "units": 1,
+      "notional": "48961476",
+      "price": "6370651205"
+    },
+    {
+      "decideBar": 286,
+      "fillBar": 287,
+      "side": "buy",
+      "units": 1,
+      "notional": "48951078",
+      "price": "6369298154"
+    },
+    {
+      "decideBar": 287,
+      "fillBar": 288,
+      "side": "buy",
+      "units": 1,
+      "notional": "48921276",
+      "price": "6365420555"
+    },
+    {
+      "decideBar": 288,
+      "fillBar": 289,
+      "side": "buy",
+      "units": 1,
+      "notional": "48946567",
+      "price": "6368711247"
+    },
+    {
+      "decideBar": 289,
+      "fillBar": 290,
+      "side": "buy",
+      "units": 1,
+      "notional": "48953260",
+      "price": "6369582032"
+    },
+    {
+      "decideBar": 290,
+      "fillBar": 291,
+      "side": "buy",
+      "units": 1,
+      "notional": "48953260",
+      "price": "6369582032"
+    },
+    {
+      "decideBar": 291,
+      "fillBar": 292,
+      "side": "buy",
+      "units": 1,
+      "notional": "48953260",
+      "price": "6369582032"
+    },
+    {
+      "decideBar": 292,
+      "fillBar": 293,
+      "side": "buy",
+      "units": 1,
+      "notional": "48953260",
+      "price": "6369582032"
+    },
+    {
+      "decideBar": 293,
+      "fillBar": 294,
+      "side": "buy",
+      "units": 1,
+      "notional": "48947684",
+      "price": "6368856514"
+    },
+    {
+      "decideBar": 294,
+      "fillBar": 295,
+      "side": "buy",
+      "units": 1,
+      "notional": "48911452",
+      "price": "6364142224"
+    },
+    {
+      "decideBar": 295,
+      "fillBar": 296,
+      "side": "buy",
+      "units": 1,
+      "notional": "48914864",
+      "price": "6364586202"
+    },
+    {
+      "decideBar": 296,
+      "fillBar": 297,
+      "side": "buy",
+      "units": 1,
+      "notional": "48929374",
+      "price": "6366474232"
+    },
+    {
+      "decideBar": 297,
+      "fillBar": 298,
+      "side": "buy",
+      "units": 1,
+      "notional": "48949066",
+      "price": "6369036380"
+    },
+    {
+      "decideBar": 298,
+      "fillBar": 299,
+      "side": "buy",
+      "units": 1,
+      "notional": "48957976",
+      "price": "6370195718"
+    },
+    {
+      "decideBar": 301,
+      "fillBar": 302,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48963481",
+      "price": "6376012161"
+    },
+    {
+      "decideBar": 311,
+      "fillBar": 312,
+      "side": "buy",
+      "units": 1,
+      "notional": "48963064",
+      "price": "6370857765"
+    },
+    {
+      "decideBar": 317,
+      "fillBar": 318,
+      "side": "buy",
+      "units": 1,
+      "notional": "48932195",
+      "price": "6366841348"
+    },
+    {
+      "decideBar": 318,
+      "fillBar": 319,
+      "side": "buy",
+      "units": 1,
+      "notional": "48933055",
+      "price": "6366953069"
+    },
+    {
+      "decideBar": 321,
+      "fillBar": 322,
+      "side": "buy",
+      "units": 1,
+      "notional": "48954559",
+      "price": "6369751199"
+    },
+    {
+      "decideBar": 329,
+      "fillBar": 330,
+      "side": "buy",
+      "units": 1,
+      "notional": "48959970",
+      "price": "6370455270"
+    },
+    {
+      "decideBar": 341,
+      "fillBar": 342,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49120066",
+      "price": "6396402452"
+    },
+    {
+      "decideBar": 342,
+      "fillBar": 343,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49149498",
+      "price": "6400235131"
+    },
+    {
+      "decideBar": 343,
+      "fillBar": 344,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49104474",
+      "price": "6394372088"
+    },
+    {
+      "decideBar": 348,
+      "fillBar": 349,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49116606",
+      "price": "6395951917"
+    },
+    {
+      "decideBar": 349,
+      "fillBar": 350,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49136716",
+      "price": "6398570642"
+    },
+    {
+      "decideBar": 350,
+      "fillBar": 351,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49127671",
+      "price": "6397392750"
+    },
+    {
+      "decideBar": 351,
+      "fillBar": 352,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49113071",
+      "price": "6395491713"
+    },
+    {
+      "decideBar": 352,
+      "fillBar": 353,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49130576",
+      "price": "6397771222"
+    },
+    {
+      "decideBar": 353,
+      "fillBar": 354,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49121039",
+      "price": "6396529260"
+    },
+    {
+      "decideBar": 354,
+      "fillBar": 355,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49130217",
+      "price": "6397724367"
+    },
+    {
+      "decideBar": 355,
+      "fillBar": 356,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49129840",
+      "price": "6397675324"
+    },
+    {
+      "decideBar": 362,
+      "fillBar": 363,
+      "side": "buy",
+      "units": 1,
+      "notional": "49078090",
+      "price": "6385824461"
+    },
+    {
+      "decideBar": 363,
+      "fillBar": 364,
+      "side": "buy",
+      "units": 1,
+      "notional": "49077124",
+      "price": "6385698778"
+    },
+    {
+      "decideBar": 364,
+      "fillBar": 365,
+      "side": "buy",
+      "units": 1,
+      "notional": "49081313",
+      "price": "6386243790"
+    },
+    {
+      "decideBar": 367,
+      "fillBar": 368,
+      "side": "buy",
+      "units": 1,
+      "notional": "49065747",
+      "price": "6384218443"
+    },
+    {
+      "decideBar": 368,
+      "fillBar": 369,
+      "side": "buy",
+      "units": 1,
+      "notional": "49072922",
+      "price": "6385151995"
+    },
+    {
+      "decideBar": 369,
+      "fillBar": 370,
+      "side": "buy",
+      "units": 1,
+      "notional": "49092038",
+      "price": "6387639359"
+    },
+    {
+      "decideBar": 370,
+      "fillBar": 371,
+      "side": "buy",
+      "units": 1,
+      "notional": "49067881",
+      "price": "6384496034"
+    },
+    {
+      "decideBar": 371,
+      "fillBar": 372,
+      "side": "buy",
+      "units": 1,
+      "notional": "49072365",
+      "price": "6385079635"
+    },
+    {
+      "decideBar": 372,
+      "fillBar": 373,
+      "side": "buy",
+      "units": 1,
+      "notional": "49058422",
+      "price": "6383265350"
+    },
+    {
+      "decideBar": 373,
+      "fillBar": 374,
+      "side": "buy",
+      "units": 1,
+      "notional": "49089182",
+      "price": "6387267746"
+    },
+    {
+      "decideBar": 374,
+      "fillBar": 375,
+      "side": "buy",
+      "units": 1,
+      "notional": "49090457",
+      "price": "6387433506"
+    },
+    {
+      "decideBar": 400,
+      "fillBar": 401,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49432306",
+      "price": "6437062326"
+    },
+    {
+      "decideBar": 401,
+      "fillBar": 402,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49427653",
+      "price": "6436456442"
+    },
+    {
+      "decideBar": 405,
+      "fillBar": 406,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49413211",
+      "price": "6434575872"
+    },
+    {
+      "decideBar": 406,
+      "fillBar": 407,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49550477",
+      "price": "6452450590"
+    },
+    {
+      "decideBar": 407,
+      "fillBar": 408,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49532231",
+      "price": "6450074513"
+    },
+    {
+      "decideBar": 408,
+      "fillBar": 409,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49564432",
+      "price": "6454267702"
+    },
+    {
+      "decideBar": 409,
+      "fillBar": 410,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49580827",
+      "price": "6456402775"
+    },
+    {
+      "decideBar": 410,
+      "fillBar": 411,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49547224",
+      "price": "6452026952"
+    },
+    {
+      "decideBar": 411,
+      "fillBar": 412,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49502998",
+      "price": "6446267874"
+    },
+    {
+      "decideBar": 412,
+      "fillBar": 413,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49529727",
+      "price": "6449748396"
+    },
+    {
+      "decideBar": 413,
+      "fillBar": 414,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49516744",
+      "price": "6448057878"
+    },
+    {
+      "decideBar": 414,
+      "fillBar": 415,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49485791",
+      "price": "6444027227"
+    },
+    {
+      "decideBar": 415,
+      "fillBar": 416,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49466212",
+      "price": "6441477654"
+    },
+    {
+      "decideBar": 416,
+      "fillBar": 417,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49451378",
+      "price": "6439545966"
+    },
+    {
+      "decideBar": 417,
+      "fillBar": 418,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49418388",
+      "price": "6435249939"
+    },
+    {
+      "decideBar": 426,
+      "fillBar": 427,
+      "side": "buy",
+      "units": 1,
+      "notional": "49410975",
+      "price": "6429137999"
+    },
+    {
+      "decideBar": 427,
+      "fillBar": 428,
+      "side": "buy",
+      "units": 1,
+      "notional": "49392930",
+      "price": "6426790052"
+    },
+    {
+      "decideBar": 428,
+      "fillBar": 429,
+      "side": "buy",
+      "units": 1,
+      "notional": "49366641",
+      "price": "6423369409"
+    },
+    {
+      "decideBar": 429,
+      "fillBar": 430,
+      "side": "buy",
+      "units": 1,
+      "notional": "49366072",
+      "price": "6423295384"
+    },
+    {
+      "decideBar": 430,
+      "fillBar": 431,
+      "side": "buy",
+      "units": 1,
+      "notional": "49389864",
+      "price": "6426391130"
+    },
+    {
+      "decideBar": 431,
+      "fillBar": 432,
+      "side": "buy",
+      "units": 1,
+      "notional": "49389864",
+      "price": "6426391130"
+    },
+    {
+      "decideBar": 432,
+      "fillBar": 433,
+      "side": "buy",
+      "units": 1,
+      "notional": "49378408",
+      "price": "6424900456"
+    },
+    {
+      "decideBar": 433,
+      "fillBar": 434,
+      "side": "buy",
+      "units": 1,
+      "notional": "49392695",
+      "price": "6426759351"
+    },
+    {
+      "decideBar": 434,
+      "fillBar": 435,
+      "side": "buy",
+      "units": 1,
+      "notional": "49392357",
+      "price": "6426715563"
+    },
+    {
+      "decideBar": 436,
+      "fillBar": 437,
+      "side": "buy",
+      "units": 1,
+      "notional": "49403408",
+      "price": "6428153360"
+    },
+    {
+      "decideBar": 437,
+      "fillBar": 438,
+      "side": "buy",
+      "units": 1,
+      "notional": "49380474",
+      "price": "6425169330"
+    },
+    {
+      "decideBar": 438,
+      "fillBar": 439,
+      "side": "buy",
+      "units": 1,
+      "notional": "49406617",
+      "price": "6428570993"
+    },
+    {
+      "decideBar": 439,
+      "fillBar": 440,
+      "side": "buy",
+      "units": 1,
+      "notional": "49370784",
+      "price": "6423908527"
+    },
+    {
+      "decideBar": 440,
+      "fillBar": 441,
+      "side": "buy",
+      "units": 1,
+      "notional": "49351686",
+      "price": "6421423603"
+    },
+    {
+      "decideBar": 441,
+      "fillBar": 442,
+      "side": "buy",
+      "units": 1,
+      "notional": "49310774",
+      "price": "6416100249"
+    },
+    {
+      "decideBar": 484,
+      "fillBar": 485,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49747434",
+      "price": "6478098198"
+    },
+    {
+      "decideBar": 495,
+      "fillBar": 496,
+      "side": "buy",
+      "units": 1,
+      "notional": "49729244",
+      "price": "6470549804"
+    },
+    {
+      "decideBar": 504,
+      "fillBar": 505,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49897528",
+      "price": "6497643345"
+    },
+    {
+      "decideBar": 505,
+      "fillBar": 506,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49920317",
+      "price": "6500611099"
+    },
+    {
+      "decideBar": 506,
+      "fillBar": 507,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49936766",
+      "price": "6502752958"
+    },
+    {
+      "decideBar": 507,
+      "fillBar": 508,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "50011092",
+      "price": "6512431687"
+    },
+    {
+      "decideBar": 508,
+      "fillBar": 509,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "50043243",
+      "price": "6516618392"
+    },
+    {
+      "decideBar": 509,
+      "fillBar": 510,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49977574",
+      "price": "6508067115"
+    },
+    {
+      "decideBar": 510,
+      "fillBar": 511,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49985599",
+      "price": "6509112114"
+    },
+    {
+      "decideBar": 511,
+      "fillBar": 512,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49901020",
+      "price": "6498098208"
+    },
+    {
+      "decideBar": 512,
+      "fillBar": 513,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49910312",
+      "price": "6499308170"
+    },
+    {
+      "decideBar": 513,
+      "fillBar": 514,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49903049",
+      "price": "6498362424"
+    },
+    {
+      "decideBar": 514,
+      "fillBar": 515,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49880359",
+      "price": "6495407718"
+    },
+    {
+      "decideBar": 515,
+      "fillBar": 516,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49872702",
+      "price": "6494410670"
+    },
+    {
+      "decideBar": 516,
+      "fillBar": 517,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49869589",
+      "price": "6494005154"
+    },
+    {
+      "decideBar": 522,
+      "fillBar": 523,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49881458",
+      "price": "6495550743"
+    },
+    {
+      "decideBar": 523,
+      "fillBar": 524,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49868617",
+      "price": "6493878675"
+    },
+    {
+      "decideBar": 524,
+      "fillBar": 525,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49868432",
+      "price": "6493854603"
+    },
+    {
+      "decideBar": 529,
+      "fillBar": 530,
+      "side": "buy",
+      "units": 1,
+      "notional": "49860525",
+      "price": "6487631357"
+    },
+    {
+      "decideBar": 530,
+      "fillBar": 531,
+      "side": "buy",
+      "units": 1,
+      "notional": "49860184",
+      "price": "6487587053"
+    },
+    {
+      "decideBar": 533,
+      "fillBar": 534,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49872286",
+      "price": "6494356407"
+    },
+    {
+      "decideBar": 534,
+      "fillBar": 535,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49878242",
+      "price": "6495132080"
+    },
+    {
+      "decideBar": 535,
+      "fillBar": 536,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49925847",
+      "price": "6501331122"
+    },
+    {
+      "decideBar": 536,
+      "fillBar": 537,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49937279",
+      "price": "6502819805"
+    },
+    {
+      "decideBar": 537,
+      "fillBar": 538,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49913324",
+      "price": "6499700358"
+    },
+    {
+      "decideBar": 538,
+      "fillBar": 539,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49870792",
+      "price": "6494161874"
+    },
+    {
+      "decideBar": 558,
+      "fillBar": 559,
+      "side": "buy",
+      "units": 1,
+      "notional": "49818178",
+      "price": "6482121417"
+    },
+    {
+      "decideBar": 559,
+      "fillBar": 560,
+      "side": "buy",
+      "units": 1,
+      "notional": "49812976",
+      "price": "6481444481"
+    },
+    {
+      "decideBar": 560,
+      "fillBar": 561,
+      "side": "buy",
+      "units": 1,
+      "notional": "49818280",
+      "price": "6482134704"
+    },
+    {
+      "decideBar": 564,
+      "fillBar": 565,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49843591",
+      "price": "6490619748"
+    },
+    {
+      "decideBar": 565,
+      "fillBar": 566,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49821091",
+      "price": "6487689905"
+    },
+    {
+      "decideBar": 566,
+      "fillBar": 567,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49823626",
+      "price": "6488019960"
+    },
+    {
+      "decideBar": 584,
+      "fillBar": 585,
+      "side": "buy",
+      "units": 1,
+      "notional": "49722340",
+      "price": "6469651463"
+    },
+    {
+      "decideBar": 585,
+      "fillBar": 586,
+      "side": "buy",
+      "units": 1,
+      "notional": "49736910",
+      "price": "6471547218"
+    },
+    {
+      "decideBar": 587,
+      "fillBar": 588,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49760502",
+      "price": "6479799995"
+    },
+    {
+      "decideBar": 594,
+      "fillBar": 595,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49741748",
+      "price": "6477357798"
+    },
+    {
+      "decideBar": 641,
+      "fillBar": 642,
+      "side": "buy",
+      "units": 1,
+      "notional": "49554105",
+      "price": "6447761463"
+    },
+    {
+      "decideBar": 644,
+      "fillBar": 645,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49556235",
+      "price": "6453200377"
+    },
+    {
+      "decideBar": 674,
+      "fillBar": 675,
+      "side": "buy",
+      "units": 1,
+      "notional": "49406481",
+      "price": "6428553218"
+    },
+    {
+      "decideBar": 675,
+      "fillBar": 676,
+      "side": "buy",
+      "units": 1,
+      "notional": "49427311",
+      "price": "6431263584"
+    },
+    {
+      "decideBar": 676,
+      "fillBar": 677,
+      "side": "buy",
+      "units": 1,
+      "notional": "49406457",
+      "price": "6428550134"
+    },
+    {
+      "decideBar": 677,
+      "fillBar": 678,
+      "side": "buy",
+      "units": 1,
+      "notional": "49371431",
+      "price": "6423992717"
+    },
+    {
+      "decideBar": 678,
+      "fillBar": 679,
+      "side": "buy",
+      "units": 1,
+      "notional": "49280057",
+      "price": "6412103492"
+    },
+    {
+      "decideBar": 679,
+      "fillBar": 680,
+      "side": "buy",
+      "units": 1,
+      "notional": "49323273",
+      "price": "6417726527"
+    },
+    {
+      "decideBar": 680,
+      "fillBar": 681,
+      "side": "buy",
+      "units": 1,
+      "notional": "49401587",
+      "price": "6427916431"
+    },
+    {
+      "decideBar": 681,
+      "fillBar": 682,
+      "side": "buy",
+      "units": 1,
+      "notional": "49434039",
+      "price": "6432138922"
+    },
+    {
+      "decideBar": 682,
+      "fillBar": 683,
+      "side": "buy",
+      "units": 1,
+      "notional": "49394074",
+      "price": "6426938923"
+    },
+    {
+      "decideBar": 683,
+      "fillBar": 684,
+      "side": "buy",
+      "units": 1,
+      "notional": "49383364",
+      "price": "6425545314"
+    },
+    {
+      "decideBar": 684,
+      "fillBar": 685,
+      "side": "buy",
+      "units": 1,
+      "notional": "49446080",
+      "price": "6433705734"
+    },
+    {
+      "decideBar": 687,
+      "fillBar": 688,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49459130",
+      "price": "6440555412"
+    },
+    {
+      "decideBar": 691,
+      "fillBar": 692,
+      "side": "buy",
+      "units": 1,
+      "notional": "49392099",
+      "price": "6426681933"
+    },
+    {
+      "decideBar": 692,
+      "fillBar": 693,
+      "side": "buy",
+      "units": 1,
+      "notional": "49392099",
+      "price": "6426681933"
+    },
+    {
+      "decideBar": 693,
+      "fillBar": 694,
+      "side": "buy",
+      "units": 1,
+      "notional": "49344408",
+      "price": "6420476635"
+    },
+    {
+      "decideBar": 694,
+      "fillBar": 695,
+      "side": "buy",
+      "units": 1,
+      "notional": "49365769",
+      "price": "6423255987"
+    },
+    {
+      "decideBar": 695,
+      "fillBar": 696,
+      "side": "buy",
+      "units": 1,
+      "notional": "49443342",
+      "price": "6433349410"
+    },
+    {
+      "decideBar": 701,
+      "fillBar": 702,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49471373",
+      "price": "6442149678"
+    },
+    {
+      "decideBar": 702,
+      "fillBar": 703,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49465016",
+      "price": "6441321768"
+    },
+    {
+      "decideBar": 703,
+      "fillBar": 704,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49523613",
+      "price": "6448952356"
+    },
+    {
+      "decideBar": 704,
+      "fillBar": 705,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49536096",
+      "price": "6450577916"
+    },
+    {
+      "decideBar": 705,
+      "fillBar": 706,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49543529",
+      "price": "6451545812"
+    },
+    {
+      "decideBar": 706,
+      "fillBar": 707,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49515208",
+      "price": "6447857843"
+    },
+    {
+      "decideBar": 707,
+      "fillBar": 708,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49485689",
+      "price": "6444013875"
+    },
+    {
+      "decideBar": 708,
+      "fillBar": 709,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49452296",
+      "price": "6439665408"
+    },
+    {
+      "decideBar": 709,
+      "fillBar": 710,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49452367",
+      "price": "6439674654"
+    },
+    {
+      "decideBar": 710,
+      "fillBar": 711,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49452204",
+      "price": "6439653481"
+    },
+    {
+      "decideBar": 711,
+      "fillBar": 712,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49456587",
+      "price": "6440224180"
+    },
+    {
+      "decideBar": 712,
+      "fillBar": 713,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49456587",
+      "price": "6440224180"
+    },
+    {
+      "decideBar": 713,
+      "fillBar": 714,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49456587",
+      "price": "6440224180"
+    },
+    {
+      "decideBar": 714,
+      "fillBar": 715,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49454553",
+      "price": "6439959334"
+    },
+    {
+      "decideBar": 716,
+      "fillBar": 717,
+      "side": "buy",
+      "units": 1,
+      "notional": "49441187",
+      "price": "6433069062"
+    },
+    {
+      "decideBar": 717,
+      "fillBar": 718,
+      "side": "buy",
+      "units": 1,
+      "notional": "49441187",
+      "price": "6433069062"
+    },
+    {
+      "decideBar": 719,
+      "fillBar": 720,
+      "side": "buy",
+      "units": 1,
+      "notional": "49452028",
+      "price": "6434479649"
+    },
+    {
+      "decideBar": 720,
+      "fillBar": 721,
+      "side": "buy",
+      "units": 1,
+      "notional": "49419198",
+      "price": "6430207942"
+    },
+    {
+      "decideBar": 721,
+      "fillBar": 722,
+      "side": "buy",
+      "units": 1,
+      "notional": "49394065",
+      "price": "6426937685"
+    },
+    {
+      "decideBar": 722,
+      "fillBar": 723,
+      "side": "buy",
+      "units": 1,
+      "notional": "49351863",
+      "price": "6421446601"
+    },
+    {
+      "decideBar": 723,
+      "fillBar": 724,
+      "side": "buy",
+      "units": 1,
+      "notional": "49315005",
+      "price": "6416650776"
+    },
+    {
+      "decideBar": 724,
+      "fillBar": 725,
+      "side": "buy",
+      "units": 1,
+      "notional": "49315987",
+      "price": "6416778521"
+    },
+    {
+      "decideBar": 725,
+      "fillBar": 726,
+      "side": "buy",
+      "units": 1,
+      "notional": "49357852",
+      "price": "6422225857"
+    },
+    {
+      "decideBar": 726,
+      "fillBar": 727,
+      "side": "buy",
+      "units": 1,
+      "notional": "49353283",
+      "price": "6421631297"
+    },
+    {
+      "decideBar": 727,
+      "fillBar": 728,
+      "side": "buy",
+      "units": 1,
+      "notional": "49341038",
+      "price": "6420038062"
+    },
+    {
+      "decideBar": 728,
+      "fillBar": 729,
+      "side": "buy",
+      "units": 1,
+      "notional": "49341038",
+      "price": "6420038029"
+    },
+    {
+      "decideBar": 729,
+      "fillBar": 730,
+      "side": "buy",
+      "units": 1,
+      "notional": "49333621",
+      "price": "6419072953"
+    },
+    {
+      "decideBar": 730,
+      "fillBar": 731,
+      "side": "buy",
+      "units": 1,
+      "notional": "49331839",
+      "price": "6418841155"
+    },
+    {
+      "decideBar": 731,
+      "fillBar": 732,
+      "side": "buy",
+      "units": 1,
+      "notional": "49366651",
+      "price": "6423370747"
+    },
+    {
+      "decideBar": 732,
+      "fillBar": 733,
+      "side": "buy",
+      "units": 1,
+      "notional": "49375394",
+      "price": "6424508267"
+    },
+    {
+      "decideBar": 733,
+      "fillBar": 734,
+      "side": "buy",
+      "units": 1,
+      "notional": "49388194",
+      "price": "6426173801"
+    },
+    {
+      "decideBar": 734,
+      "fillBar": 735,
+      "side": "buy",
+      "units": 1,
+      "notional": "49419056",
+      "price": "6430189416"
+    },
+    {
+      "decideBar": 735,
+      "fillBar": 736,
+      "side": "buy",
+      "units": 1,
+      "notional": "49419056",
+      "price": "6430189416"
+    },
+    {
+      "decideBar": 748,
+      "fillBar": 749,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49471920",
+      "price": "6442220907"
+    },
+    {
+      "decideBar": 749,
+      "fillBar": 750,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49471920",
+      "price": "6442220907"
+    },
+    {
+      "decideBar": 750,
+      "fillBar": 751,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49471920",
+      "price": "6442220907"
+    },
+    {
+      "decideBar": 757,
+      "fillBar": 758,
+      "side": "buy",
+      "units": 1,
+      "notional": "49446723",
+      "price": "6433789342"
+    },
+    {
+      "decideBar": 758,
+      "fillBar": 759,
+      "side": "buy",
+      "units": 1,
+      "notional": "49434444",
+      "price": "6432191748"
+    },
+    {
+      "decideBar": 759,
+      "fillBar": 760,
+      "side": "buy",
+      "units": 1,
+      "notional": "49439971",
+      "price": "6432910852"
+    },
+    {
+      "decideBar": 766,
+      "fillBar": 767,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49492715",
+      "price": "6444928895"
+    },
+    {
+      "decideBar": 767,
+      "fillBar": 768,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49492715",
+      "price": "6444928895"
+    },
+    {
+      "decideBar": 769,
+      "fillBar": 770,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49507008",
+      "price": "6446790023"
+    },
+    {
+      "decideBar": 770,
+      "fillBar": 771,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49507008",
+      "price": "6446790023"
+    },
+    {
+      "decideBar": 771,
+      "fillBar": 772,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49506831",
+      "price": "6446766992"
+    },
+    {
+      "decideBar": 772,
+      "fillBar": 773,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49512005",
+      "price": "6447440657"
+    },
+    {
+      "decideBar": 773,
+      "fillBar": 774,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49513241",
+      "price": "6447601668"
+    },
+    {
+      "decideBar": 774,
+      "fillBar": 775,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49513241",
+      "price": "6447601668"
+    },
+    {
+      "decideBar": 779,
+      "fillBar": 780,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49497654",
+      "price": "6445571915"
+    },
+    {
+      "decideBar": 780,
+      "fillBar": 781,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49497654",
+      "price": "6445571915"
+    },
+    {
+      "decideBar": 781,
+      "fillBar": 782,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49491607",
+      "price": "6444784449"
+    },
+    {
+      "decideBar": 782,
+      "fillBar": 783,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49494597",
+      "price": "6445173819"
+    },
+    {
+      "decideBar": 783,
+      "fillBar": 784,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49498974",
+      "price": "6445743843"
+    },
+    {
+      "decideBar": 786,
+      "fillBar": 787,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49493478",
+      "price": "6445028215"
+    },
+    {
+      "decideBar": 787,
+      "fillBar": 788,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49506811",
+      "price": "6446764359"
+    },
+    {
+      "decideBar": 788,
+      "fillBar": 789,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49513812",
+      "price": "6447676078"
+    },
+    {
+      "decideBar": 789,
+      "fillBar": 790,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49513812",
+      "price": "6447676078"
+    },
+    {
+      "decideBar": 790,
+      "fillBar": 791,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49494712",
+      "price": "6445188780"
+    },
+    {
+      "decideBar": 795,
+      "fillBar": 796,
+      "side": "buy",
+      "units": 1,
+      "notional": "49488963",
+      "price": "6439285508"
+    },
+    {
+      "decideBar": 796,
+      "fillBar": 797,
+      "side": "buy",
+      "units": 1,
+      "notional": "49463570",
+      "price": "6435981431"
+    },
+    {
+      "decideBar": 797,
+      "fillBar": 798,
+      "side": "buy",
+      "units": 1,
+      "notional": "49474892",
+      "price": "6437454630"
+    },
+    {
+      "decideBar": 798,
+      "fillBar": 799,
+      "side": "buy",
+      "units": 1,
+      "notional": "49479241",
+      "price": "6438020428"
+    },
+    {
+      "decideBar": 799,
+      "fillBar": 800,
+      "side": "buy",
+      "units": 1,
+      "notional": "49479241",
+      "price": "6438020428"
+    },
+    {
+      "decideBar": 800,
+      "fillBar": 801,
+      "side": "buy",
+      "units": 1,
+      "notional": "49479705",
+      "price": "6438080873"
+    },
+    {
+      "decideBar": 801,
+      "fillBar": 802,
+      "side": "buy",
+      "units": 1,
+      "notional": "49474248",
+      "price": "6437370763"
+    },
+    {
+      "decideBar": 802,
+      "fillBar": 803,
+      "side": "buy",
+      "units": 1,
+      "notional": "49468288",
+      "price": "6436595211"
+    },
+    {
+      "decideBar": 803,
+      "fillBar": 804,
+      "side": "buy",
+      "units": 1,
+      "notional": "49478419",
+      "price": "6437913499"
+    },
+    {
+      "decideBar": 804,
+      "fillBar": 805,
+      "side": "buy",
+      "units": 1,
+      "notional": "49480698",
+      "price": "6438209997"
+    },
+    {
+      "decideBar": 805,
+      "fillBar": 806,
+      "side": "buy",
+      "units": 1,
+      "notional": "49477298",
+      "price": "6437767704"
+    },
+    {
+      "decideBar": 806,
+      "fillBar": 807,
+      "side": "buy",
+      "units": 1,
+      "notional": "49477298",
+      "price": "6437767704"
+    },
+    {
+      "decideBar": 807,
+      "fillBar": 808,
+      "side": "buy",
+      "units": 1,
+      "notional": "49480762",
+      "price": "6438218355"
+    },
+    {
+      "decideBar": 810,
+      "fillBar": 811,
+      "side": "buy",
+      "units": 1,
+      "notional": "49474936",
+      "price": "6437460383"
+    },
+    {
+      "decideBar": 811,
+      "fillBar": 812,
+      "side": "buy",
+      "units": 1,
+      "notional": "49481032",
+      "price": "6438253520"
+    },
+    {
+      "decideBar": 813,
+      "fillBar": 814,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49504197",
+      "price": "6446423914"
+    },
+    {
+      "decideBar": 814,
+      "fillBar": 815,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49523633",
+      "price": "6448954986"
+    },
+    {
+      "decideBar": 815,
+      "fillBar": 816,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49527348",
+      "price": "6449438601"
+    },
+    {
+      "decideBar": 816,
+      "fillBar": 817,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49573965",
+      "price": "6455509117"
+    },
+    {
+      "decideBar": 817,
+      "fillBar": 818,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49553885",
+      "price": "6452894294"
+    },
+    {
+      "decideBar": 818,
+      "fillBar": 819,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49514324",
+      "price": "6447742675"
+    },
+    {
+      "decideBar": 819,
+      "fillBar": 820,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49514324",
+      "price": "6447742675"
+    },
+    {
+      "decideBar": 820,
+      "fillBar": 821,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49498674",
+      "price": "6445704830"
+    },
+    {
+      "decideBar": 821,
+      "fillBar": 822,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49498674",
+      "price": "6445704830"
+    },
+    {
+      "decideBar": 822,
+      "fillBar": 823,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49498792",
+      "price": "6445720090"
+    },
+    {
+      "decideBar": 823,
+      "fillBar": 824,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49499899",
+      "price": "6445864262"
+    },
+    {
+      "decideBar": 824,
+      "fillBar": 825,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49502588",
+      "price": "6446214448"
+    },
+    {
+      "decideBar": 825,
+      "fillBar": 826,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49521935",
+      "price": "6448733775"
+    },
+    {
+      "decideBar": 826,
+      "fillBar": 827,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49508157",
+      "price": "6446939750"
+    },
+    {
+      "decideBar": 827,
+      "fillBar": 828,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49527201",
+      "price": "6449419454"
+    },
+    {
+      "decideBar": 828,
+      "fillBar": 829,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49527201",
+      "price": "6449419454"
+    },
+    {
+      "decideBar": 829,
+      "fillBar": 830,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49522001",
+      "price": "6448742409"
+    },
+    {
+      "decideBar": 840,
+      "fillBar": 841,
+      "side": "buy",
+      "units": 1,
+      "notional": "49430458",
+      "price": "6431672927"
+    },
+    {
+      "decideBar": 841,
+      "fillBar": 842,
+      "side": "buy",
+      "units": 1,
+      "notional": "49416702",
+      "price": "6429883224"
+    },
+    {
+      "decideBar": 842,
+      "fillBar": 843,
+      "side": "buy",
+      "units": 1,
+      "notional": "49437957",
+      "price": "6432648746"
+    },
+    {
+      "decideBar": 843,
+      "fillBar": 844,
+      "side": "buy",
+      "units": 1,
+      "notional": "49454968",
+      "price": "6434862199"
+    },
+    {
+      "decideBar": 844,
+      "fillBar": 845,
+      "side": "buy",
+      "units": 1,
+      "notional": "49462568",
+      "price": "6435850907"
+    },
+    {
+      "decideBar": 845,
+      "fillBar": 846,
+      "side": "buy",
+      "units": 1,
+      "notional": "49467914",
+      "price": "6436546538"
+    },
+    {
+      "decideBar": 847,
+      "fillBar": 848,
+      "side": "buy",
+      "units": 1,
+      "notional": "49480350",
+      "price": "6438164750"
+    },
+    {
+      "decideBar": 848,
+      "fillBar": 849,
+      "side": "buy",
+      "units": 1,
+      "notional": "49483857",
+      "price": "6438621099"
+    },
+    {
+      "decideBar": 853,
+      "fillBar": 854,
+      "side": "buy",
+      "units": 1,
+      "notional": "49473198",
+      "price": "6437234134"
+    },
+    {
+      "decideBar": 854,
+      "fillBar": 855,
+      "side": "buy",
+      "units": 1,
+      "notional": "49473198",
+      "price": "6437234134"
+    },
+    {
+      "decideBar": 855,
+      "fillBar": 856,
+      "side": "buy",
+      "units": 1,
+      "notional": "49475108",
+      "price": "6437482657"
+    },
+    {
+      "decideBar": 856,
+      "fillBar": 857,
+      "side": "buy",
+      "units": 1,
+      "notional": "49452653",
+      "price": "6434560936"
+    },
+    {
+      "decideBar": 857,
+      "fillBar": 858,
+      "side": "buy",
+      "units": 1,
+      "notional": "49434643",
+      "price": "6432217609"
+    },
+    {
+      "decideBar": 858,
+      "fillBar": 859,
+      "side": "buy",
+      "units": 1,
+      "notional": "49434643",
+      "price": "6432217609"
+    },
+    {
+      "decideBar": 859,
+      "fillBar": 860,
+      "side": "buy",
+      "units": 1,
+      "notional": "49459402",
+      "price": "6435439097"
+    },
+    {
+      "decideBar": 860,
+      "fillBar": 861,
+      "side": "buy",
+      "units": 1,
+      "notional": "49459402",
+      "price": "6435439097"
+    },
+    {
+      "decideBar": 861,
+      "fillBar": 862,
+      "side": "buy",
+      "units": 1,
+      "notional": "49468982",
+      "price": "6436685627"
+    },
+    {
+      "decideBar": 862,
+      "fillBar": 863,
+      "side": "buy",
+      "units": 1,
+      "notional": "49454149",
+      "price": "6434755653"
+    },
+    {
+      "decideBar": 863,
+      "fillBar": 864,
+      "side": "buy",
+      "units": 1,
+      "notional": "49453809",
+      "price": "6434711309"
+    },
+    {
+      "decideBar": 864,
+      "fillBar": 865,
+      "side": "buy",
+      "units": 1,
+      "notional": "49468028",
+      "price": "6436561483"
+    },
+    {
+      "decideBar": 865,
+      "fillBar": 866,
+      "side": "buy",
+      "units": 1,
+      "notional": "49473762",
+      "price": "6437307589"
+    },
+    {
+      "decideBar": 877,
+      "fillBar": 878,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49650235",
+      "price": "6465441012"
+    },
+    {
+      "decideBar": 878,
+      "fillBar": 879,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49672070",
+      "price": "6468284367"
+    },
+    {
+      "decideBar": 879,
+      "fillBar": 880,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49674550",
+      "price": "6468607334"
+    },
+    {
+      "decideBar": 880,
+      "fillBar": 881,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49674550",
+      "price": "6468607334"
+    },
+    {
+      "decideBar": 881,
+      "fillBar": 882,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49682794",
+      "price": "6469680840"
+    },
+    {
+      "decideBar": 882,
+      "fillBar": 883,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49682794",
+      "price": "6469680840"
+    },
+    {
+      "decideBar": 883,
+      "fillBar": 884,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49653678",
+      "price": "6465889356"
+    },
+    {
+      "decideBar": 886,
+      "fillBar": 887,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49665185",
+      "price": "6467387884"
+    },
+    {
+      "decideBar": 887,
+      "fillBar": 888,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49678862",
+      "price": "6469168856"
+    },
+    {
+      "decideBar": 888,
+      "fillBar": 889,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49690910",
+      "price": "6470737759"
+    },
+    {
+      "decideBar": 889,
+      "fillBar": 890,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49704899",
+      "price": "6472559276"
+    },
+    {
+      "decideBar": 895,
+      "fillBar": 896,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49661620",
+      "price": "6466923508"
+    },
+    {
+      "decideBar": 896,
+      "fillBar": 897,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49668509",
+      "price": "6467820663"
+    },
+    {
+      "decideBar": 897,
+      "fillBar": 898,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49656712",
+      "price": "6466284389"
+    },
+    {
+      "decideBar": 916,
+      "fillBar": 917,
+      "side": "buy",
+      "units": 1,
+      "notional": "49645062",
+      "price": "6459596276"
+    },
+    {
+      "decideBar": 917,
+      "fillBar": 918,
+      "side": "buy",
+      "units": 1,
+      "notional": "49632677",
+      "price": "6457984839"
+    },
+    {
+      "decideBar": 918,
+      "fillBar": 919,
+      "side": "buy",
+      "units": 1,
+      "notional": "49633603",
+      "price": "6458105406"
+    },
+    {
+      "decideBar": 919,
+      "fillBar": 920,
+      "side": "buy",
+      "units": 1,
+      "notional": "49644762",
+      "price": "6459557349"
+    },
+    {
+      "decideBar": 959,
+      "fillBar": 960,
+      "side": "buy",
+      "units": 1,
+      "notional": "49628698",
+      "price": "6457467187"
+    },
+    {
+      "decideBar": 960,
+      "fillBar": 961,
+      "side": "buy",
+      "units": 1,
+      "notional": "49638823",
+      "price": "6458784504"
+    },
+    {
+      "decideBar": 966,
+      "fillBar": 967,
+      "side": "buy",
+      "units": 1,
+      "notional": "49632683",
+      "price": "6457985615"
+    },
+    {
+      "decideBar": 967,
+      "fillBar": 968,
+      "side": "buy",
+      "units": 1,
+      "notional": "49615581",
+      "price": "6455760364"
+    },
+    {
+      "decideBar": 968,
+      "fillBar": 969,
+      "side": "buy",
+      "units": 1,
+      "notional": "49586334",
+      "price": "6451954983"
+    },
+    {
+      "decideBar": 969,
+      "fillBar": 970,
+      "side": "buy",
+      "units": 1,
+      "notional": "49605593",
+      "price": "6454460722"
+    },
+    {
+      "decideBar": 970,
+      "fillBar": 971,
+      "side": "buy",
+      "units": 1,
+      "notional": "49612725",
+      "price": "6455388697"
+    },
+    {
+      "decideBar": 974,
+      "fillBar": 975,
+      "side": "buy",
+      "units": 1,
+      "notional": "49639841",
+      "price": "6458917102"
+    },
+    {
+      "decideBar": 975,
+      "fillBar": 976,
+      "side": "buy",
+      "units": 1,
+      "notional": "49617198",
+      "price": "6455970894"
+    },
+    {
+      "decideBar": 976,
+      "fillBar": 977,
+      "side": "buy",
+      "units": 1,
+      "notional": "49625174",
+      "price": "6457008560"
+    },
+    {
+      "decideBar": 984,
+      "fillBar": 985,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49670152",
+      "price": "6468034717"
+    },
+    {
+      "decideBar": 985,
+      "fillBar": 986,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49674041",
+      "price": "6468541000"
+    },
+    {
+      "decideBar": 986,
+      "fillBar": 987,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49675831",
+      "price": "6468774204"
+    },
+    {
+      "decideBar": 987,
+      "fillBar": 988,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49674805",
+      "price": "6468640468"
+    },
+    {
+      "decideBar": 988,
+      "fillBar": 989,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49677274",
+      "price": "6468961924"
+    },
+    {
+      "decideBar": 989,
+      "fillBar": 990,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49677274",
+      "price": "6468961924"
+    },
+    {
+      "decideBar": 990,
+      "fillBar": 991,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49686443",
+      "price": "6470155945"
+    },
+    {
+      "decideBar": 991,
+      "fillBar": 992,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49693981",
+      "price": "6471137656"
+    },
+    {
+      "decideBar": 992,
+      "fillBar": 993,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49664418",
+      "price": "6467287861"
+    },
+    {
+      "decideBar": 996,
+      "fillBar": 997,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49671518",
+      "price": "6468212490"
+    },
+    {
+      "decideBar": 997,
+      "fillBar": 998,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49671519",
+      "price": "6468212636"
+    },
+    {
+      "decideBar": 998,
+      "fillBar": 999,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49671519",
+      "price": "6468212636"
+    },
+    {
+      "decideBar": 999,
+      "fillBar": 1000,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49671604",
+      "price": "6468223605"
+    },
+    {
+      "decideBar": 1000,
+      "fillBar": 1001,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49671604",
+      "price": "6468223605"
+    },
+    {
+      "decideBar": 1001,
+      "fillBar": 1002,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49667944",
+      "price": "6467747089"
+    },
+    {
+      "decideBar": 1010,
+      "fillBar": 1011,
+      "side": "buy",
+      "units": 1,
+      "notional": "49657028",
+      "price": "6461153309"
+    },
+    {
+      "decideBar": 1011,
+      "fillBar": 1012,
+      "side": "buy",
+      "units": 1,
+      "notional": "49611636",
+      "price": "6455247059"
+    },
+    {
+      "decideBar": 1012,
+      "fillBar": 1013,
+      "side": "buy",
+      "units": 1,
+      "notional": "49537879",
+      "price": "6445650153"
+    },
+    {
+      "decideBar": 1013,
+      "fillBar": 1014,
+      "side": "buy",
+      "units": 1,
+      "notional": "49539636",
+      "price": "6445878832"
+    },
+    {
+      "decideBar": 1014,
+      "fillBar": 1015,
+      "side": "buy",
+      "units": 1,
+      "notional": "49558880",
+      "price": "6448382748"
+    },
+    {
+      "decideBar": 1015,
+      "fillBar": 1016,
+      "side": "buy",
+      "units": 1,
+      "notional": "49565526",
+      "price": "6449247499"
+    },
+    {
+      "decideBar": 1016,
+      "fillBar": 1017,
+      "side": "buy",
+      "units": 1,
+      "notional": "49579068",
+      "price": "6451009552"
+    },
+    {
+      "decideBar": 1017,
+      "fillBar": 1018,
+      "side": "buy",
+      "units": 1,
+      "notional": "49583139",
+      "price": "6451539191"
+    },
+    {
+      "decideBar": 1018,
+      "fillBar": 1019,
+      "side": "buy",
+      "units": 1,
+      "notional": "49582089",
+      "price": "6451402610"
+    },
+    {
+      "decideBar": 1019,
+      "fillBar": 1020,
+      "side": "buy",
+      "units": 1,
+      "notional": "49582089",
+      "price": "6451402610"
+    },
+    {
+      "decideBar": 1020,
+      "fillBar": 1021,
+      "side": "buy",
+      "units": 1,
+      "notional": "49620529",
+      "price": "6456404144"
+    },
+    {
+      "decideBar": 1021,
+      "fillBar": 1022,
+      "side": "buy",
+      "units": 1,
+      "notional": "49620529",
+      "price": "6456404144"
+    },
+    {
+      "decideBar": 1022,
+      "fillBar": 1023,
+      "side": "buy",
+      "units": 1,
+      "notional": "49624407",
+      "price": "6456908782"
+    },
+    {
+      "decideBar": 1025,
+      "fillBar": 1026,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49661691",
+      "price": "6466932788"
+    },
+    {
+      "decideBar": 1026,
+      "fillBar": 1027,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49669576",
+      "price": "6467959508"
+    },
+    {
+      "decideBar": 1027,
+      "fillBar": 1028,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49666705",
+      "price": "6467585705"
+    },
+    {
+      "decideBar": 1028,
+      "fillBar": 1029,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49700501",
+      "price": "6471986661"
+    },
+    {
+      "decideBar": 1029,
+      "fillBar": 1030,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49763976",
+      "price": "6480252356"
+    },
+    {
+      "decideBar": 1030,
+      "fillBar": 1031,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49754416",
+      "price": "6479007350"
+    },
+    {
+      "decideBar": 1031,
+      "fillBar": 1032,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49755146",
+      "price": "6479102539"
+    },
+    {
+      "decideBar": 1032,
+      "fillBar": 1033,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49790274",
+      "price": "6483676851"
+    },
+    {
+      "decideBar": 1033,
+      "fillBar": 1034,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49806526",
+      "price": "6485793151"
+    },
+    {
+      "decideBar": 1034,
+      "fillBar": 1035,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49790926",
+      "price": "6483761801"
+    },
+    {
+      "decideBar": 1035,
+      "fillBar": 1036,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49749209",
+      "price": "6478329386"
+    },
+    {
+      "decideBar": 1036,
+      "fillBar": 1037,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49739240",
+      "price": "6477031265"
+    },
+    {
+      "decideBar": 1037,
+      "fillBar": 1038,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49724356",
+      "price": "6475093045"
+    },
+    {
+      "decideBar": 1038,
+      "fillBar": 1039,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49712795",
+      "price": "6473587669"
+    },
+    {
+      "decideBar": 1039,
+      "fillBar": 1040,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49720416",
+      "price": "6474579953"
+    },
+    {
+      "decideBar": 1040,
+      "fillBar": 1041,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49703827",
+      "price": "6472419772"
+    },
+    {
+      "decideBar": 1041,
+      "fillBar": 1042,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49701414",
+      "price": "6472105512"
+    },
+    {
+      "decideBar": 1042,
+      "fillBar": 1043,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49701414",
+      "price": "6472105512"
+    },
+    {
+      "decideBar": 1043,
+      "fillBar": 1044,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49673642",
+      "price": "6468489087"
+    },
+    {
+      "decideBar": 1046,
+      "fillBar": 1047,
+      "side": "buy",
+      "units": 1,
+      "notional": "49646255",
+      "price": "6459751624"
+    },
+    {
+      "decideBar": 1047,
+      "fillBar": 1048,
+      "side": "buy",
+      "units": 1,
+      "notional": "49637251",
+      "price": "6458580091"
+    },
+    {
+      "decideBar": 1048,
+      "fillBar": 1049,
+      "side": "buy",
+      "units": 1,
+      "notional": "49602460",
+      "price": "6454053282"
+    },
+    {
+      "decideBar": 1049,
+      "fillBar": 1050,
+      "side": "buy",
+      "units": 1,
+      "notional": "49580805",
+      "price": "6451235446"
+    },
+    {
+      "decideBar": 1050,
+      "fillBar": 1051,
+      "side": "buy",
+      "units": 1,
+      "notional": "49617562",
+      "price": "6456018056"
+    },
+    {
+      "decideBar": 1051,
+      "fillBar": 1052,
+      "side": "buy",
+      "units": 1,
+      "notional": "49626536",
+      "price": "6457185832"
+    },
+    {
+      "decideBar": 1052,
+      "fillBar": 1053,
+      "side": "buy",
+      "units": 1,
+      "notional": "49629414",
+      "price": "6457560365"
+    },
+    {
+      "decideBar": 1053,
+      "fillBar": 1054,
+      "side": "buy",
+      "units": 1,
+      "notional": "49623267",
+      "price": "6456760424"
+    },
+    {
+      "decideBar": 1054,
+      "fillBar": 1055,
+      "side": "buy",
+      "units": 1,
+      "notional": "49622043",
+      "price": "6456601200"
+    },
+    {
+      "decideBar": 1055,
+      "fillBar": 1056,
+      "side": "buy",
+      "units": 1,
+      "notional": "49618221",
+      "price": "6456103929"
+    },
+    {
+      "decideBar": 1056,
+      "fillBar": 1057,
+      "side": "buy",
+      "units": 1,
+      "notional": "49618221",
+      "price": "6456103929"
+    },
+    {
+      "decideBar": 1066,
+      "fillBar": 1067,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49677747",
+      "price": "6469023625"
+    },
+    {
+      "decideBar": 1067,
+      "fillBar": 1068,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49667924",
+      "price": "6467744459"
+    },
+    {
+      "decideBar": 1069,
+      "fillBar": 1070,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49660486",
+      "price": "6466775991"
+    },
+    {
+      "decideBar": 1081,
+      "fillBar": 1082,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49692633",
+      "price": "6470962105"
+    },
+    {
+      "decideBar": 1082,
+      "fillBar": 1083,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49688518",
+      "price": "6470426197"
+    },
+    {
+      "decideBar": 1083,
+      "fillBar": 1084,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49677116",
+      "price": "6468941431"
+    },
+    {
+      "decideBar": 1084,
+      "fillBar": 1085,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49675966",
+      "price": "6468791719"
+    },
+    {
+      "decideBar": 1085,
+      "fillBar": 1086,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49696517",
+      "price": "6471467861"
+    },
+    {
+      "decideBar": 1086,
+      "fillBar": 1087,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49690920",
+      "price": "6470738983"
+    },
+    {
+      "decideBar": 1087,
+      "fillBar": 1088,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49679616",
+      "price": "6469266930"
+    },
+    {
+      "decideBar": 1088,
+      "fillBar": 1089,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49660259",
+      "price": "6466746331"
+    },
+    {
+      "decideBar": 1091,
+      "fillBar": 1092,
+      "side": "buy",
+      "units": 1,
+      "notional": "49648092",
+      "price": "6459990506"
+    },
+    {
+      "decideBar": 1092,
+      "fillBar": 1093,
+      "side": "buy",
+      "units": 1,
+      "notional": "49647597",
+      "price": "6459926145"
+    },
+    {
+      "decideBar": 1093,
+      "fillBar": 1094,
+      "side": "buy",
+      "units": 1,
+      "notional": "49647597",
+      "price": "6459926145"
+    },
+    {
+      "decideBar": 1094,
+      "fillBar": 1095,
+      "side": "buy",
+      "units": 1,
+      "notional": "49647597",
+      "price": "6459926145"
+    },
+    {
+      "decideBar": 1101,
+      "fillBar": 1102,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49665679",
+      "price": "6467452099"
+    },
+    {
+      "decideBar": 1102,
+      "fillBar": 1103,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49664265",
+      "price": "6467267913"
+    },
+    {
+      "decideBar": 1103,
+      "fillBar": 1104,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49670819",
+      "price": "6468121543"
+    },
+    {
+      "decideBar": 1104,
+      "fillBar": 1105,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49665524",
+      "price": "6467432017"
+    },
+    {
+      "decideBar": 1187,
+      "fillBar": 1188,
+      "side": "buy",
+      "units": 1,
+      "notional": "49360449",
+      "price": "6422563676"
+    },
+    {
+      "decideBar": 1188,
+      "fillBar": 1189,
+      "side": "buy",
+      "units": 1,
+      "notional": "49359338",
+      "price": "6422419260"
+    },
+    {
+      "decideBar": 1189,
+      "fillBar": 1190,
+      "side": "buy",
+      "units": 1,
+      "notional": "49327136",
+      "price": "6418229271"
+    },
+    {
+      "decideBar": 1190,
+      "fillBar": 1191,
+      "side": "buy",
+      "units": 1,
+      "notional": "49327108",
+      "price": "6418225652"
+    },
+    {
+      "decideBar": 1191,
+      "fillBar": 1192,
+      "side": "buy",
+      "units": 1,
+      "notional": "49309743",
+      "price": "6415966139"
+    },
+    {
+      "decideBar": 1192,
+      "fillBar": 1193,
+      "side": "buy",
+      "units": 1,
+      "notional": "49322470",
+      "price": "6417622133"
+    },
+    {
+      "decideBar": 1193,
+      "fillBar": 1194,
+      "side": "buy",
+      "units": 1,
+      "notional": "49310046",
+      "price": "6416005513"
+    },
+    {
+      "decideBar": 1194,
+      "fillBar": 1195,
+      "side": "buy",
+      "units": 1,
+      "notional": "49308443",
+      "price": "6415796907"
+    },
+    {
+      "decideBar": 1195,
+      "fillBar": 1196,
+      "side": "buy",
+      "units": 1,
+      "notional": "49335604",
+      "price": "6419331009"
+    },
+    {
+      "decideBar": 1206,
+      "fillBar": 1207,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49397836",
+      "price": "6432573707"
+    },
+    {
+      "decideBar": 1207,
+      "fillBar": 1208,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49380937",
+      "price": "6430373183"
+    },
+    {
+      "decideBar": 1208,
+      "fillBar": 1209,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49380937",
+      "price": "6430373183"
+    },
+    {
+      "decideBar": 1209,
+      "fillBar": 1210,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49380937",
+      "price": "6430373183"
+    },
+    {
+      "decideBar": 1210,
+      "fillBar": 1211,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49373988",
+      "price": "6429468180"
+    },
+    {
+      "decideBar": 1211,
+      "fillBar": 1212,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49375720",
+      "price": "6429693777"
+    },
+    {
+      "decideBar": 1212,
+      "fillBar": 1213,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49370998",
+      "price": "6429078855"
+    },
+    {
+      "decideBar": 1213,
+      "fillBar": 1214,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49362739",
+      "price": "6428003321"
+    },
+    {
+      "decideBar": 1214,
+      "fillBar": 1215,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49362220",
+      "price": "6427935791"
+    },
+    {
+      "decideBar": 1225,
+      "fillBar": 1226,
+      "side": "buy",
+      "units": 1,
+      "notional": "49293887",
+      "price": "6413903011"
+    },
+    {
+      "decideBar": 1227,
+      "fillBar": 1228,
+      "side": "buy",
+      "units": 1,
+      "notional": "49281313",
+      "price": "6412266972"
+    },
+    {
+      "decideBar": 1228,
+      "fillBar": 1229,
+      "side": "buy",
+      "units": 1,
+      "notional": "49287729",
+      "price": "6413101710"
+    },
+    {
+      "decideBar": 1230,
+      "fillBar": 1231,
+      "side": "buy",
+      "units": 1,
+      "notional": "49284833",
+      "price": "6412725029"
+    },
+    {
+      "decideBar": 1245,
+      "fillBar": 1246,
+      "side": "buy",
+      "units": 1,
+      "notional": "49283691",
+      "price": "6412576324"
+    },
+    {
+      "decideBar": 1246,
+      "fillBar": 1247,
+      "side": "buy",
+      "units": 1,
+      "notional": "49278470",
+      "price": "6411897042"
+    },
+    {
+      "decideBar": 1276,
+      "fillBar": 1277,
+      "side": "buy",
+      "units": 1,
+      "notional": "49287583",
+      "price": "6413082747"
+    },
+    {
+      "decideBar": 1277,
+      "fillBar": 1278,
+      "side": "buy",
+      "units": 1,
+      "notional": "49256340",
+      "price": "6409017503"
+    },
+    {
+      "decideBar": 1280,
+      "fillBar": 1281,
+      "side": "buy",
+      "units": 1,
+      "notional": "49291252",
+      "price": "6413560095"
+    },
+    {
+      "decideBar": 1282,
+      "fillBar": 1283,
+      "side": "buy",
+      "units": 1,
+      "notional": "49285442",
+      "price": "6412804181"
+    },
+    {
+      "decideBar": 1283,
+      "fillBar": 1284,
+      "side": "buy",
+      "units": 1,
+      "notional": "49285572",
+      "price": "6412821066"
+    },
+    {
+      "decideBar": 1294,
+      "fillBar": 1295,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49307666",
+      "price": "6420831762"
+    },
+    {
+      "decideBar": 1295,
+      "fillBar": 1296,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49343912",
+      "price": "6425551725"
+    },
+    {
+      "decideBar": 1296,
+      "fillBar": 1297,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49343912",
+      "price": "6425551725"
+    },
+    {
+      "decideBar": 1297,
+      "fillBar": 1298,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49342537",
+      "price": "6425372633"
+    },
+    {
+      "decideBar": 1298,
+      "fillBar": 1299,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49344576",
+      "price": "6425638140"
+    },
+    {
+      "decideBar": 1299,
+      "fillBar": 1300,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49367668",
+      "price": "6428645197"
+    },
+    {
+      "decideBar": 1300,
+      "fillBar": 1301,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49354434",
+      "price": "6426921830"
+    },
+    {
+      "decideBar": 1301,
+      "fillBar": 1302,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49334142",
+      "price": "6424279422"
+    },
+    {
+      "decideBar": 1302,
+      "fillBar": 1303,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49310994",
+      "price": "6421265155"
+    },
+    {
+      "decideBar": 1303,
+      "fillBar": 1304,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49310964",
+      "price": "6421261277"
+    },
+    {
+      "decideBar": 1304,
+      "fillBar": 1305,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49310964",
+      "price": "6421261277"
+    },
+    {
+      "decideBar": 1317,
+      "fillBar": 1318,
+      "side": "buy",
+      "units": 1,
+      "notional": "49167932",
+      "price": "6397514252"
+    },
+    {
+      "decideBar": 1318,
+      "fillBar": 1319,
+      "side": "buy",
+      "units": 1,
+      "notional": "49159089",
+      "price": "6396363736"
+    },
+    {
+      "decideBar": 1319,
+      "fillBar": 1320,
+      "side": "buy",
+      "units": 1,
+      "notional": "49148965",
+      "price": "6395046453"
+    },
+    {
+      "decideBar": 1329,
+      "fillBar": 1330,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49190596",
+      "price": "6405586974"
+    },
+    {
+      "decideBar": 1331,
+      "fillBar": 1332,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49190925",
+      "price": "6405629754"
+    },
+    {
+      "decideBar": 1343,
+      "fillBar": 1344,
+      "side": "buy",
+      "units": 1,
+      "notional": "49162560",
+      "price": "6396815271"
+    },
+    {
+      "decideBar": 1344,
+      "fillBar": 1345,
+      "side": "buy",
+      "units": 1,
+      "notional": "49171746",
+      "price": "6398010637"
+    },
+    {
+      "decideBar": 1347,
+      "fillBar": 1348,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49186978",
+      "price": "6405115724"
+    },
+    {
+      "decideBar": 1348,
+      "fillBar": 1349,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49186972",
+      "price": "6405114973"
+    },
+    {
+      "decideBar": 1358,
+      "fillBar": 1359,
+      "side": "buy",
+      "units": 1,
+      "notional": "49137601",
+      "price": "6393567679"
+    },
+    {
+      "decideBar": 1359,
+      "fillBar": 1360,
+      "side": "buy",
+      "units": 1,
+      "notional": "49137601",
+      "price": "6393567679"
+    },
+    {
+      "decideBar": 1360,
+      "fillBar": 1361,
+      "side": "buy",
+      "units": 1,
+      "notional": "49159444",
+      "price": "6396409885"
+    },
+    {
+      "decideBar": 1361,
+      "fillBar": 1362,
+      "side": "buy",
+      "units": 1,
+      "notional": "49159444",
+      "price": "6396409885"
+    },
+    {
+      "decideBar": 1367,
+      "fillBar": 1368,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49197547",
+      "price": "6406492079"
+    },
+    {
+      "decideBar": 1368,
+      "fillBar": 1369,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49215853",
+      "price": "6408875874"
+    },
+    {
+      "decideBar": 1369,
+      "fillBar": 1370,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49202385",
+      "price": "6407122009"
+    },
+    {
+      "decideBar": 1370,
+      "fillBar": 1371,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49202385",
+      "price": "6407122009"
+    },
+    {
+      "decideBar": 1371,
+      "fillBar": 1372,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49192209",
+      "price": "6405796915"
+    },
+    {
+      "decideBar": 1406,
+      "fillBar": 1407,
+      "side": "buy",
+      "units": 1,
+      "notional": "49091639",
+      "price": "6387587401"
+    },
+    {
+      "decideBar": 1410,
+      "fillBar": 1411,
+      "side": "buy",
+      "units": 1,
+      "notional": "49087729",
+      "price": "6387078553"
+    },
+    {
+      "decideBar": 1415,
+      "fillBar": 1416,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49096143",
+      "price": "6393287331"
+    },
+    {
+      "decideBar": 1426,
+      "fillBar": 1427,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "49134779",
+      "price": "6398318371"
+    },
+    {
+      "decideBar": 1434,
+      "fillBar": 1435,
+      "side": "buy",
+      "units": 1,
+      "notional": "48595003",
+      "price": "6322967213"
+    },
+    {
+      "decideBar": 1435,
+      "fillBar": 1436,
+      "side": "sell",
+      "units": 1,
+      "proceeds": "48629738",
+      "price": "6332552177"
+    },
+    {
+      "decideBar": 1436,
+      "fillBar": 1437,
+      "side": "buy",
+      "units": 1,
+      "notional": "48466204",
+      "price": "6306208498"
+    },
+    {
+      "decideBar": 1437,
+      "fillBar": 1438,
+      "side": "buy",
+      "units": 1,
+      "notional": "48543252",
+      "price": "6316233637"
+    }
+  ],
+  "buys": 291,
+  "sells": 289,
+  "terminal": "flatten",
+  "maxSlipBps": 100
+}

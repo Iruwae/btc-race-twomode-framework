@@ -1,0 +1,207 @@
+{
+  "bars": 1440,
+  "windowStartMs": 1794926700000,
+  "windowEndMs": 1795013040000,
+  "startCashUsd": 1000,
+  "finalCashUsd": 1063.649505,
+  "pnlUsd": 63.649505,
+  "pnlMicroUsdc": 63649505,
+  "trades": [
+    {
+      "decideBar": 26,
+      "side": "buy",
+      "fillBar": 27,
+      "price": "6461486777",
+      "qty": "1547012",
+      "notional": "1000000000"
+    },
+    {
+      "decideBar": 42,
+      "side": "sell",
+      "fillBar": 43,
+      "price": "6500065782",
+      "qty": "1547012",
+      "proceeds": "1005165748"
+    },
+    {
+      "decideBar": 70,
+      "side": "buy",
+      "fillBar": 71,
+      "price": "6345756498",
+      "qty": "1583363",
+      "notional": "1005165748"
+    },
+    {
+      "decideBar": 80,
+      "side": "sell",
+      "fillBar": 81,
+      "price": "6429131424",
+      "qty": "1583363",
+      "proceeds": "1017557695"
+    },
+    {
+      "decideBar": 132,
+      "side": "buy",
+      "fillBar": 133,
+      "price": "6353742055",
+      "qty": "1600868",
+      "notional": "1017557695"
+    },
+    {
+      "decideBar": 142,
+      "side": "sell",
+      "fillBar": 143,
+      "price": "6392867731",
+      "qty": "1600868",
+      "proceeds": "1023004371"
+    },
+    {
+      "decideBar": 175,
+      "side": "buy",
+      "fillBar": 176,
+      "price": "6369727877",
+      "qty": "1605398",
+      "notional": "1023004371"
+    },
+    {
+      "decideBar": 222,
+      "side": "sell",
+      "fillBar": 223,
+      "price": "6392722148",
+      "qty": "1605398",
+      "proceeds": "1025875820"
+    },
+    {
+      "decideBar": 244,
+      "side": "buy",
+      "fillBar": 245,
+      "price": "6373530602",
+      "qty": "1608944",
+      "notional": "1025875820"
+    },
+    {
+      "decideBar": 249,
+      "side": "sell",
+      "fillBar": 250,
+      "price": "6378642458",
+      "qty": "1608944",
+      "proceeds": "1025877335"
+    },
+    {
+      "decideBar": 294,
+      "side": "buy",
+      "fillBar": 295,
+      "price": "6372692213",
+      "qty": "1609158",
+      "notional": "1025877335"
+    },
+    {
+      "decideBar": 409,
+      "side": "sell",
+      "fillBar": 410,
+      "price": "6449241065",
+      "qty": "1609158",
+      "proceeds": "1037369671"
+    },
+    {
+      "decideBar": 441,
+      "side": "buy",
+      "fillBar": 442,
+      "price": "6424056564",
+      "qty": "1614174",
+      "notional": "1037369671"
+    },
+    {
+      "decideBar": 508,
+      "side": "sell",
+      "fillBar": 509,
+      "price": "6510237622",
+      "qty": "1614174",
+      "proceeds": "1050445283"
+    },
+    {
+      "decideBar": 678,
+      "side": "buy",
+      "fillBar": 679,
+      "price": "6420276027",
+      "qty": "1635482",
+      "notional": "1050445283"
+    },
+    {
+      "decideBar": 705,
+      "side": "sell",
+      "fillBar": 706,
+      "price": "6444153213",
+      "qty": "1635482",
+      "proceeds": "1053508086"
+    },
+    {
+      "decideBar": 723,
+      "side": "buy",
+      "fillBar": 724,
+      "price": "6424761825",
+      "qty": "1639106",
+      "notional": "1053508086"
+    },
+    {
+      "decideBar": 816,
+      "side": "sell",
+      "fillBar": 817,
+      "price": "6448183488",
+      "qty": "1639106",
+      "proceeds": "1056502853"
+    },
+    {
+      "decideBar": 841,
+      "side": "buy",
+      "fillBar": 842,
+      "price": "6437728493",
+      "qty": "1640454",
+      "notional": "1056502853"
+    },
+    {
+      "decideBar": 889,
+      "side": "sell",
+      "fillBar": 890,
+      "price": "6465483348",
+      "qty": "1640454",
+      "proceeds": "1060208548"
+    },
+    {
+      "decideBar": 1012,
+      "side": "buy",
+      "fillBar": 1013,
+      "price": "6453223428",
+      "qty": "1642255",
+      "notional": "1060208548"
+    },
+    {
+      "decideBar": 1033,
+      "side": "sell",
+      "fillBar": 1034,
+      "price": "6478900068",
+      "qty": "1642255",
+      "proceeds": "1063575002"
+    },
+    {
+      "decideBar": 1049,
+      "side": "buy",
+      "fillBar": 1050,
+      "price": "6458733498",
+      "qty": "1646065",
+      "notional": "1063575002"
+    },
+    {
+      "decideBar": 1085,
+      "side": "sell",
+      "fillBar": 1086,
+      "price": "6464356730",
+      "qty": "1646065",
+      "proceeds": "1063649505"
+    }
+  ],
+  "buys": 12,
+  "sells": 12,
+  "terminal": "flat",
+  "maxSlipBps": 100
+}
