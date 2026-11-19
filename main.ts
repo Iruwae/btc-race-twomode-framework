@@ -16,29 +16,37 @@
 //   opening anchor (close of race bar 0). Momentum (2 up closes above
 //   the anchor), micro-dip turn (close below anchor -50bp then up),
 //   and aggressive dip-buy (close below anchor -50bp, $100, at most
-//   one per 15 bars). Each cold lot: $200 ($100 aggressive), TP +1.0%,
-//   NO stop, 4h hold. This is the fix for 2026-11-19: the old bot sat
-//   idle for 4h while the 04:00 dip passed. The hybrid buys the 04:00
-//   dip at bar 2-3 on the live replay (+$11.90 on live19c vs +$2.93
-//   for the ladder alone).
+//   one per 15 bars). Each cold lot: $200 ($100 aggressive), NO stop,
+//   4h hold, user trailing exit (see below). This is the fix for
+//   2026-11-19: the old bot sat idle for 4h while the 04:00 dip
+//   passed. The hybrid buys the 04:00 dip at bar 2-3 on the live
+//   replay.
 //
-//   Bars 30+ (ladder): the proven 3-tranche dip-buy ladder, each
-//   tranche with its own TP / stop / hold clock: arms 1.5% / 2.25% /
-//   3.0% below the 4h reference high (growing window), turn
-//   confirmation (close above best of prior 3 closes), TP +1.0%,
-//   cost stop -0.8%, 4h hold, 5% drawdown halt. A ladder lot's exit
-//   rests entries 60 bars; a cold lot's exit rests 15.
+//   Bars 30+ (ladder): the 3-tranche dip-buy ladder, user spec
+//   (2026-11-19): arms 1.0% / 1.5% / 2.0% below the 4h reference
+//   high (growing window), turn confirmation (close above best of
+//   prior 3 closes), equal thirds, cost stop -0.8%, 4h hold, 5%
+//   drawdown halt. A ladder lot's exit rests entries 60 bars; a cold
+//   lot's exit rests 15.
+//
+//   Exits (ALL lots, user trailing rule 2026-11-19): no fixed TP at
+//   +1% — let it run; at +1.5% arm a stop-loss at +1.0%; at +2% run a
+//   continuation analysis (2 rising closes = still rising) — hold and
+//   trail the stop at max(+1.0%, peak - 0.5%) if up, exit at market
+//   if stalled/reversed. A lot that touches +1% but never arms and
+//   falls back below +0.7% exits early. Hard stop -0.8% (ladder lots
+//   only) and the 4h hold cap are the backstops.
 //
 // Validation (kit exact fill model, net PnL after fees; see
-// btc-scalp-variant-20261119.md): hybrid OOS +$17.94, all-windows
-// +$14.21 (dev18 -$3.73, dev17 +$4.32, 15 Nov +$0.09, live19c
-// +$11.90, live19f +$1.63); 2x-fee OOS +$10.78, all +$5.26. Trades
-// in the first hour of EVERY validation window (first buy bar 2 on
-// live19c). Beats the ladder-only framework (OOS +$8.06, all +$11.24,
-// first buy bar 103) and every fixed scalping variant tested (~90
-// configs: tight-stop 1m scalping loses to fees + whipsaw on every
-// window; regime-switching adaptive wins OOS but loses -$21 on the
-// V-shape dev window).
+// btc-scalp-variant-20261119.md): trailing exit on the user ladder
+// OOS +$36.83, all-windows +$32.86 (dev18 -$3.97, dev17 +$5.57,
+// 15 Nov +$25.27, live19c +$0.75, live19f +$5.24); 2x-fee OOS
+// +$25.55, all +$19.39. Beats the fixed-TP user ladder (OOS +$14.71,
+// all +$8.28, worst -$15.80) and the old-ladder hybrid (OOS +$17.94,
+// all +$14.21). Trades in the first hour of EVERY validation window
+// (first buy bar 2 on live19c). Rejected in validation: no-dip buy
+// (buys strength, -$13.83 across 19 lots) and bounce confirmation
+// (neutral: OOS +$0.05, ALL -$0.54).
 //
 // Mode detection uses only the bar time the harness sends in each batch
 // (the dev window's timestamps are public kit data). Everything is
@@ -60,7 +68,6 @@ const MAX_SLIP = 100;
 // --- race-mode parameters ---
 const LOOKBACK = 240; // four-hour window for the pullback high (steady state)
 const DIP_LEVELS = [100n, 150n, 200n]; // ladder tranche arms, bps below high (user override 2026-11-19: 1% / 1.5% / 2%)
-const TAKE_BPS = 100n; // take profit, bps of entry
 const STOP_BPS = 80n; // cost stop, bps of entry (ladder lots only)
 const NO_STOP = 10000n; // cold lots: no stop, hold for the bounce
 const REST_LADDER = 60; // no re-entry for this long after a ladder lot exits
@@ -75,6 +82,17 @@ const COLD_GAP = 15; // min bars between aggressive cold dip-buys
 const COLD_SIZE_BPS = 2000n; // $200 of equity per cold lot
 const COLD_AGG_SIZE_BPS = 1000n; // $100 per aggressive cold dip-buy
 const LADDER_SIZE_BPS = 3333n; // one third of equity per ladder tranche
+// --- user trailing exit (2026-11-19): no fixed TP at +1%; arm SL at
+// +UT_LOCK once +UT_ARM is reached; at +UT_CONT run a continuation
+// analysis (2 rising closes = still rising) — hold and trail if up,
+// exit at market if stalled/reversed. Riding lots trail the stop at
+// max(+UT_LOCK, peak - UT_GAP). Lots that touch +1% but never arm and
+// fall back below +UT_RETRACE exit early (lock the small win).
+const UT_ARM_BPS = 150n;
+const UT_LOCK_BPS = 100n;
+const UT_CONT_BPS = 200n;
+const UT_GAP_BPS = 50n;
+const UT_RETRACE_BPS = 70n;
 
 // --- dev schedule lookup ---
 const schedByBar = new Map<number, SchedTrade>();
@@ -94,9 +112,13 @@ interface Lot {
   entryBar: number; // absolute bar index at entry
   level: 'cold' | number; // 'cold' or ladder level 0/1/2
   notional: bigint; // quote spent on this lot
-  tp: bigint; // take-profit, bps
   stop: bigint; // cost stop, bps (NO_STOP = none)
   maxhold: number; // max bars held
+  peak: bigint; // highest close since entry (trailing-stop reference)
+  armed: boolean; // SL at +UT_LOCK armed (+UT_ARM reached)
+  riding: boolean; // continuation analysis passed at +UT_CONT; trailing
+  analyzed: boolean; // continuation analysis already run once
+  touched100: boolean; // unrealized PnL touched +1% at some point
 }
 let lots: Lot[] = [];
 let ladFilled = [false, false, false];
@@ -165,15 +187,34 @@ await runBars({
     if (state.warmingUp) return [];
 
     const orders: OrderInput[] = [];
-    // Exits first: per-lot TP / stop / hold cap, pro-rata by notional
-    // share of the position's cost basis.
+    // Exits first: per-lot user trailing exit / stop / hold cap, pro-rata
+    // by notional share of the position's cost basis.
     if (owns && held!.qty > 0n && held!.cost > 0n) {
       const exiting: Lot[] = [];
       for (const lot of lots) {
-        const tp = close * BPS >= lot.entry * (BPS + lot.tp);
+        if (close > lot.peak) lot.peak = close;
+        const unrealBps = ((close - lot.entry) * 10000n) / lot.entry;
+        if (unrealBps >= 100n && !lot.touched100) lot.touched100 = true;
+        if (!lot.armed && unrealBps >= UT_ARM_BPS) lot.armed = true;
+        let trailExit = false;
+        if (lot.armed && !lot.riding && close * BPS <= lot.entry * (BPS + UT_LOCK_BPS)) trailExit = true;
+        if (!trailExit && !lot.analyzed && unrealBps >= UT_CONT_BPS) {
+          lot.analyzed = true;
+          const n = pastCloses.length;
+          const contUp = n >= 3 && close > pastCloses[n - 2] && pastCloses[n - 2] > pastCloses[n - 3];
+          if (contUp) lot.riding = true;
+          else trailExit = true;
+        }
+        if (!trailExit && lot.riding) {
+          const lockPx = (lot.entry * (BPS + UT_LOCK_BPS)) / BPS;
+          const trailPx = (lot.peak * (BPS - UT_GAP_BPS)) / BPS;
+          const slPx = trailPx > lockPx ? trailPx : lockPx;
+          if (close <= slPx) trailExit = true;
+        }
+        if (!trailExit && !lot.armed && lot.touched100 && unrealBps < UT_RETRACE_BPS) trailExit = true;
         const stop = lot.stop < NO_STOP && close * BPS <= lot.entry * (BPS - lot.stop);
         const stale = idx - lot.entryBar >= lot.maxhold;
-        if (stopped || tp || stop || stale) {
+        if (stopped || trailExit || stop || stale) {
           let q = (held!.qty * lot.notional) / held!.cost;
           if (q > held!.qty) q = held!.qty;
           if (q > 0n) {
@@ -218,7 +259,7 @@ await runBars({
         const spend = spendFor(COLD_AGG_SIZE_BPS);
         if (spend === null) return [];
         lastColdBuyBar = raceIdx;
-        lots.push({ entry: close, entryBar: idx, level: 'cold', notional: spend, tp: TAKE_BPS, stop: NO_STOP, maxhold: MAX_HOLD });
+        lots.push({ entry: close, entryBar: idx, level: 'cold', notional: spend, stop: NO_STOP, maxhold: MAX_HOLD, peak: close, armed: false, riding: false, analyzed: false, touched100: false });
         return [{ side: 'buy', symbol: SYMBOL, notional_quote_units: spend, max_slippage_bps: MAX_SLIP }];
       }
       // momentum: 2 up closes above the anchor
@@ -230,13 +271,13 @@ await runBars({
         const spend = spendFor(COLD_SIZE_BPS);
         if (spend === null) return [];
         lastColdBuyBar = raceIdx;
-        lots.push({ entry: close, entryBar: idx, level: 'cold', notional: spend, tp: TAKE_BPS, stop: NO_STOP, maxhold: MAX_HOLD });
+        lots.push({ entry: close, entryBar: idx, level: 'cold', notional: spend, stop: NO_STOP, maxhold: MAX_HOLD, peak: close, armed: false, riding: false, analyzed: false, touched100: false });
         return [{ side: 'buy', symbol: SYMBOL, notional_quote_units: spend, max_slippage_bps: MAX_SLIP }];
       }
       return [];
     }
 
-    // ---- LADDER phase: race bars 30+, proven 3-tranche dip-buy ----
+    // ---- LADDER phase: race bars 30+, user ladder [100,150,200] ----
     for (let i = 0; i < 3; i++) {
       if (close * BPS <= refHigh * (BPS - DIP_LEVELS[i])) ladArmed[i] = true;
       if (close >= refHigh) ladArmed[i] = false;
@@ -251,7 +292,7 @@ await runBars({
       const spend = spendFor(LADDER_SIZE_BPS);
       if (spend === null) return [];
       ladFilled[i] = true;
-      lots.push({ entry: close, entryBar: idx, level: i, notional: spend, tp: TAKE_BPS, stop: STOP_BPS, maxhold: MAX_HOLD });
+      lots.push({ entry: close, entryBar: idx, level: i, notional: spend, stop: STOP_BPS, maxhold: MAX_HOLD, peak: close, armed: false, riding: false, analyzed: false, touched100: false });
       return [{ side: 'buy', symbol: SYMBOL, notional_quote_units: spend, max_slippage_bps: MAX_SLIP }];
     }
     return [];

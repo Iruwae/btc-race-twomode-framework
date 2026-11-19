@@ -32,7 +32,8 @@ opening anchor (close of race bar 0):
 | Micro-dip turn | close below anchor −50bp, then up | $200 equity |
 | Aggressive dip | close below anchor −50bp (no turn needed), max 1 per 15 bars | $100 equity |
 
-Each cold lot: TP +1.0%, NO stop, 4h hold, 15-bar rest after exit.
+Each cold lot: user trailing exit (see below), NO stop, 4h hold,
+15-bar rest after exit.
 
 ### Ladder — race bars 30+
 
@@ -41,48 +42,62 @@ Each cold lot: TP +1.0%, NO stop, 4h hold, 15-bar rest after exit.
 | Reference high | 4h window (`LOOKBACK = 240` bars), growing adaptively |
 | Tranche arms | 1.0% / 1.5% / 2.0% below the reference high (user override 2026-11-19 — see note below) |
 | Entry | turn confirmation (close above best of prior 3 closes), fill next bar open |
-| Take profit | +1.0% per tranche |
+| Exit | user trailing exit (see below) — NO fixed TP |
 | Cost stop | −0.8% per tranche |
 | Max hold | 240 bars (4h) per tranche |
 | Rest after a ladder lot exits | 60 bars |
 | Circuit breaker | 5% drawdown stops trading |
 | Fees | 4bp + 2bp slippage per side (kit fill model) |
 
-Validation (kit exact fill model, net PnL after fees): hybrid OOS
-(dev17 + 15 Nov + live19) **+$14.71**, all 5 windows **+$8.28**
-(dev18 −$6.43, dev17 +$11.48, 15 Nov −$15.80, live19c +$14.76,
-live19f +$4.27); 2x-fee OOS +$3.22, all −$5.38. First buy bar 2
-on live19c (three cold lots into the 04:00 dip, all TP +1%:
-+$8.66), and ≥1 first-hour trade on EVERY validation window.
+### Trailing exit — all lots (user rule 2026-11-19)
+
+No fixed take-profit at +1% — let it run. At +1.5% unrealized, arm a
+stop-loss at +1.0%. At +2.0%, run a continuation analysis (2 rising
+1m closes = still rising): if up, HOLD and trail the stop at
+max(+1.0%, peak − 0.5%); if stalled or reversed, exit at market. A
+lot that touches +1% but never arms and falls back below +0.7%
+exits early (locks the small win). Hard stop −0.8% (ladder lots
+only) and the 4h hold cap are the backstops.
+
+Validation (kit exact fill model, net PnL after fees): trailing exit
+on the user ladder OOS (dev17 + 15 Nov + live19) **+$36.83**, all 5
+windows **+$32.86** (dev18 −$3.97, dev17 +$5.57, 15 Nov +$25.27,
+live19c +$0.75, live19f +$5.24); 2x-fee OOS +$25.55, all +$19.39.
+First buy bar 2 on live19c, and ≥1 first-hour trade on EVERY
+validation window. The trailing exit is what fixes the user ladder's
+trend-day tail: 15 Nov goes from −$15.80 (fixed TP) to +$25.27,
+because dip-buy lots ride their bounces instead of exiting at +1%.
 
 > **User override (2026-11-19, "tetap pakai aturan fleksibel gua"):**
 > the ladder legs are the user's [100, 150, 200] bps even though the
 > backtest favored [150, 225, 300] (OOS +$17.94 / all +$14.21 /
-> worst window −$3.73 vs this ladder's OOS +$14.71 / all +$8.28 /
-> worst −$15.80). The shallower arms win on ranging days (dev17
-> +$7.16, live19c +$2.86) but buy the falling knife on the 15 Nov
-> trend day (5 extra losing lots, −$15.80 vs +$0.09). The user's
-> rules win over the backtest.
+> worst window −$3.73 vs this ladder's fixed-TP OOS +$14.71 /
+> all +$8.28 / worst −$15.80). The shallower arms win on ranging
+> days (dev17 +$7.16, live19c +$2.86) but buy the falling knife on
+> the 15 Nov trend day (5 extra losing lots, −$15.80 vs +$0.09).
+> The user's rules win over the backtest — and the trailing exit
+> then repairs the tail (15 Nov +$25.27, worst window now −$3.97).
 
-Comparison (same fill model, same windows): ladder-only framework
-OOS +$8.06 / all +$11.24 / first buy bar 103; best fixed 1m scalp
-(RSI bounce, no stop) OOS +$4.96 / all −$7.91; regime-switching
-adaptive OOS +$21.72 but all +$0.69 with a −$21.03 tail on the
-V-shape dev window (rejected: one bad day wipes the race);
-tight-stop 1m scalping (mom-ema / breakout / grid, ~90 configs)
-loses on every window — fees + whipsaw. ATR-scaled TP/stop and
-trend-filtered grid both made things worse. The hybrid (with the
-user's [100, 150, 200] ladder) is the submitted candidate per the
-user's explicit override; its worst window is now −$15.80 (15 Nov
-trend day), vs −$3.73 for the [150, 225, 300] ladder.
+Comparison (same fill model, same windows): fixed-TP user ladder
+OOS +$14.71 / all +$8.28 / worst −$15.80; old-ladder hybrid
+([150, 225, 300], fixed TP) OOS +$17.94 / all +$14.21; ladder-only
+framework OOS +$8.06 / all +$11.24 / first buy bar 103; best fixed
+1m scalp (RSI bounce, no stop) OOS +$4.96 / all −$7.91;
+regime-switching adaptive OOS +$21.72 but all +$0.69 with a −$21.03
+tail on the V-shape dev window (rejected: one bad day wipes the
+race); tight-stop 1m scalping (mom-ema / breakout / grid, ~90
+configs) loses on every window — fees + whipsaw. ATR-scaled TP/stop
+and trend-filtered grid both made things worse. Rejected in the
+trailing-exit round: no-dip buy (buys strength into reversals,
+−$13.83 net across 19 lots, dev17 −$11.57 alone) and bounce
+confirmation (neutral: OOS +$0.05, ALL −$0.54, worst −$0.59).
+The hybrid with the user's ladder + trailing exit is the submitted
+candidate; its worst window is −$3.97 (dev18).
 and it trades from the opening bars.
 
 ## Known limits
 
-- The cold leg loses on a falling open (dev18: 3 cold lots −$7.19,
-  ladder +$4.19 → −$3.73). Bounded by the $100-200 sizes and the 4h
-  hold; the ladder leg carries the day elsewhere.
-- Only tranche 1 (1.5%) ever fills in practice on the ladder: the turn
-  confirmation means the bounce is already underway, so deeper levels
-  rarely trigger.
+- The cold leg loses on a falling open (dev18 is the worst window at
+  −$3.97). Bounded by the $100-200 sizes and the 4h hold; the
+  trailing exit caps the downside elsewhere (15 Nov: +$25.27).
 - The dev score does not decide prizes. The live window does.

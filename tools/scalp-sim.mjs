@@ -27,6 +27,7 @@ const sellF = (q, o, d) => { const D = d * 10n ** 6n; const v = value(q, o); con
 const closes = bars.map(b => Number(b.c));
 const highs = bars.map(b => Number(b.h));
 const opens = bars.map(b => Number(b.o));
+const lows = bars.map(b => Number(b.l));
 const ema = (n) => {
   const k = 2 / (n + 1); const out = new Array(closes.length).fill(null);
   let s = 0; for (let i = 0; i < n; i++) s += closes[i];
@@ -83,7 +84,9 @@ const ATR_SCALE = !!cfg.atrScale;
 const CHOP_MODE = cfg.chopMode || 'sit';
 let dipArmed = false;
 let ladArmed = [false, false, false], ladFilled = [false, false, false];
-const LAD_LEVELS = [150, 225, 300]; // bps below the running high, like the framework
+let ndLastBar = -1e9; // last no-dip buy bar (cooldown)
+let ndRTs = 0, ndWins = 0, ndPnL = 0n; // no-dip buy standalone stats
+const LAD_LEVELS = cfg.ladLevels ?? [100, 150, 200]; // bps below the running high (user ladder, commit 0f84228)
 // Precomputed regime per bar: COLD <30 bars, else ER(30) target with
 // 3-bar persistence (a regime only takes over after 3 straight bars).
 const regimeArr = (() => {
@@ -145,6 +148,7 @@ function adaptiveSignal(k) {
       if (c >= h) ladArmed[i] = false;
     }
     if (!(c > m)) return null;
+    if (cfg.bounceConfirm && !(bars[k].l > bars[k - 1].l)) return null; // best entry: wait for a higher low
     for (let i = 0; i < 3; i++) {
       if (ladFilled[i] || !ladArmed[i]) continue;
       if (c > h * (1 - LAD_LEVELS[i] / 10000)) continue;
@@ -152,6 +156,19 @@ function adaptiveSignal(k) {
       const tp = ATR_SCALE ? clamp(Math.round(4 * atrBps), 80, 150) : (cfg.trendTP ?? 100);
       const stop = ATR_SCALE ? clamp(Math.round(2 * atrBps), 40, 100) : (cfg.trendStop ?? 80);
       return { tp, stop, maxhold: cfg.trendHold ?? 240, sizeBps: cfg.trendSize ?? 3333, level: i, rest: 60 };
+    }
+    // No-dip buy (user rule 2026-11-19): momentum clearly up and no
+    // pullback forming — buy a tranche now instead of waiting for the
+    // -1% leg. One tranche per trigger, 60-bar cooldown, max 3 lots.
+    if (cfg.noDip) {
+      const nearHigh = c > h * (1 - 0.005);
+      const upCloses = k >= 2 && c > closes[k - 1] && closes[k - 1] > closes[k - 2];
+      const emaUp = emaF[k] !== null && emaF[k - 1] !== null && c > emaF[k] && emaF[k] > emaF[k - 1];
+      const higherLow = k >= 1 && bars[k].l > bars[k - 1].l;
+      if (nearHigh && upCloses && emaUp && higherLow && k - ndLastBar >= (cfg.noDipGap ?? 60)) {
+        ndLastBar = k;
+        return { tp: cfg.trendTP ?? 100, stop: cfg.trendStop ?? 80, maxhold: cfg.trendHold ?? 240, sizeBps: cfg.trendSize ?? 3333, level: 'nd', rest: 60 };
+      }
     }
     return null;
   }
@@ -177,6 +194,18 @@ const PULL_LO = cfg.pullLo ?? 20, PULL_HI = cfg.pullHi ?? 60;
 const RSI_EXIT = cfg.rsiExit ?? 30;
 const TRAIL_ARM = cfg.trailArm ?? 0, TRAIL_GAP = cfg.trailGap ?? 0;
 const EXIT_MODE = cfg.exitMode || 'fixed';
+// --- user's trailing exit (2026-11-19): no TP at +1%; arm SL at +utLock
+// once +utArm is reached; at +utCont run a continuation analysis —
+// hold (trailing) if momentum still up, exit if stalled/reversed.
+const UT_ARM = cfg.utArm ?? 150, UT_LOCK = cfg.utLock ?? 100, UT_CONT = cfg.utCont ?? 200;
+const UT_GAP = cfg.utGap ?? 50, UT_CHECK = cfg.utCheck || 'ema', UT_RETRACE = cfg.utRetrace ?? 30;
+const UT_GRACE = cfg.utGrace ?? 0; // min bars after first +1% touch before a retrace exit may fire
+function contCheck(k, which) {
+  const c = closes[k];
+  if (which === 'hh') return k >= 2 && c > closes[k - 1] && closes[k - 1] > closes[k - 2];
+  if (which === 'ema-rsi') return emaF[k] !== null && emaF[k - 1] !== null && c > emaF[k] && emaF[k] > emaF[k - 1] && rsiArr[k] !== null && rsiArr[k] < 70;
+  return emaF[k] !== null && emaF[k - 1] !== null && c > emaF[k] && emaF[k] > emaF[k - 1]; // 'ema'
+}
 const GRID_GAP = cfg.gridGap ?? 15;
 
 function entrySignal(k) {
@@ -245,7 +274,7 @@ for (let k = 0; k < bars.length; k++) {
       const f = buyF(p.amount, bar.o, bar.od);
       if (f.price * BPS <= p.ref * (BPS + 100n) && f.qty > 0n) {
         cash -= p.amount; trades++; fees += p.amount - f.spend;
-        const nl = { qty: f.qty, cost: p.amount, entryBar: k, entryPrice: bar.c, peakSinceEntry: bar.c, pnl: -p.amount, tp: BigInt(p.tp), stop: BigInt(p.stop), maxhold: p.maxhold, level: p.level, cold: p.cold };
+        const nl = { qty: f.qty, cost: p.amount, entryBar: k, entryPrice: bar.c, peakSinceEntry: bar.c, pnl: -p.amount, tp: BigInt(p.tp), stop: BigInt(p.stop), maxhold: p.maxhold, level: p.level, cold: p.cold, armed: false, riding: false, analyzed: false, touched100: false, touched100Bar: 0 };
         lots.push(nl);
         if (TRACE) console.error(`BUY  bar ${k} ${fmtT(bar.t)} ${legOf(nl)} $${Number(p.amount) / 1e6} @ ${Number(bar.o) / 1e5}`);
         lastBuyBar = k;
@@ -257,12 +286,14 @@ for (let k = 0; k < bars.length; k++) {
         cash += f.proceeds; trades++; fees += value(p.qty, f.price) - f.proceeds;
         p.lot.pnl += f.proceeds;
         if (p.lot.pnl > 0n) wins++;
+        if (p.lot.level === 'nd') { ndPnL += p.lot.pnl; ndRTs++; if (p.lot.pnl > 0n) ndWins++; }
         rts++;
         if (p.lot.entryBar < 60) firstHourRT++;
         if (TRACE) console.error(`SELL bar ${k} ${fmtT(bar.t)} ${legOf(p.lot)} $${Number(f.proceeds) / 1e6} lotPnL $${(Number(p.lot.pnl) / 1e6).toFixed(2)} entryBar ${p.lot.entryBar}`);
         cooling = p.rest ?? REST;
         // ladder full exit: no ladder lots left open -> re-arm all levels
-        if (p.lot.level !== undefined && !lots.some(l => l.level !== undefined)) {
+        // (no-dip lots do not block the ladder re-arm)
+        if (typeof p.lot.level === 'number' && !lots.some(l => typeof l.level === 'number')) {
           ladFilled = [false, false, false];
           ladArmed = [false, false, false];
         }
@@ -287,6 +318,37 @@ for (let k = 0; k < bars.length; k++) {
   const exiting = [];
   for (const lot of lots) {
     if (close > lot.peakSinceEntry) lot.peakSinceEntry = close;
+    if (EXIT_MODE === 'utrail') {
+      // User's trailing exit: no fixed TP at +1%; arm SL at +UT_LOCK once
+      // +UT_ARM is reached; at +UT_CONT run a continuation analysis.
+      const unrealBps = Number((close - lot.entryPrice) * 10000n / lot.entryPrice);
+      if (unrealBps >= 100 && !lot.touched100) { lot.touched100 = true; lot.touched100Bar = k; }
+      if (!lot.armed && unrealBps >= UT_ARM) lot.armed = true;
+      let trailExit = false;
+      if (lot.armed && !lot.riding) {
+        if (close * BPS <= lot.entryPrice * (BPS + BigInt(UT_LOCK))) trailExit = true;
+      }
+      if (!trailExit && !lot.analyzed && unrealBps >= UT_CONT) {
+        lot.analyzed = true;
+        if (contCheck(k, UT_CHECK)) lot.riding = true;
+        else trailExit = true;
+      }
+      if (!trailExit && lot.riding) {
+        const lockPx = lot.entryPrice * (BPS + BigInt(UT_LOCK)) / BPS;
+        const trailPx = lot.peakSinceEntry * (BPS - BigInt(UT_GAP)) / BPS;
+        const slPx = trailPx > lockPx ? trailPx : lockPx;
+        if (close <= slPx) trailExit = true;
+        else if (cfg.utEmaExit !== false && emaF[k] !== null && close < emaF[k]) trailExit = true; // lost the short trend
+      }
+      // Fallback: touched +1% but never armed, then fell back below
+      // +UT_RETRACE — take the small win instead of riding it to the
+      // hard stop / MAXHOLD. UT_RETRACE 0 disables this.
+      if (!trailExit && !lot.armed && lot.touched100 && UT_RETRACE > 0 && unrealBps < UT_RETRACE && k - lot.touched100Bar >= UT_GRACE) trailExit = true;
+      const stop = lot.stop < 10000n && close * BPS <= lot.entryPrice * (BPS - lot.stop);
+      const stale = k - lot.entryBar >= lot.maxhold;
+      if (stopped || trailExit || stop || stale) exiting.push(lot);
+      continue;
+    }
     const tp = close * BPS >= lot.entryPrice * (BPS + lot.tp);
     let stopPx = lot.entryPrice * (BPS - lot.stop);
     if (EXIT_MODE === 'trail' && TRAIL_ARM > 0) {
@@ -326,12 +388,13 @@ if (lots.length > 0 || pending.length > 0) {
   for (const p of pending) {
     if (p.side === 'buy') {
       const f = buyF(p.amount, last.c, last.cd);
-      if (f.qty > 0n) { cash -= p.amount; trades++; fees += p.amount - f.spend; lots.push({ qty: f.qty, cost: p.amount, entryBar: bars.length - 1, entryPrice: last.c, peakSinceEntry: last.c, pnl: -p.amount, tp: BigInt(p.tp), stop: BigInt(p.stop), maxhold: p.maxhold, level: p.level }); }
+      if (f.qty > 0n) { cash -= p.amount; trades++; fees += p.amount - f.spend; lots.push({ qty: f.qty, cost: p.amount, entryBar: bars.length - 1, entryPrice: last.c, peakSinceEntry: last.c, pnl: -p.amount, tp: BigInt(p.tp), stop: BigInt(p.stop), maxhold: p.maxhold, level: p.level, armed: false, riding: false, analyzed: false, touched100: false, touched100Bar: 0 }); }
     } else {
       const f = sellF(p.qty, last.c, last.cd);
       cash += f.proceeds; trades++; fees += value(p.qty, f.price) - f.proceeds;
       p.lot.pnl += f.proceeds;
       if (p.lot.pnl > 0n) wins++;
+      if (p.lot.level === 'nd') { ndPnL += p.lot.pnl; ndRTs++; if (p.lot.pnl > 0n) ndWins++; }
       rts++;
       if (p.lot.entryBar < 60) firstHourRT++;
     }
@@ -342,6 +405,7 @@ if (lots.length > 0 || pending.length > 0) {
     cash += f.proceeds; trades++; fees += value(lot.qty, f.price) - f.proceeds;
     lot.pnl += f.proceeds;
     if (lot.pnl > 0n) wins++;
+    if (lot.level === 'nd') { ndPnL += lot.pnl; ndRTs++; if (lot.pnl > 0n) ndWins++; }
     rts++;
     if (lot.entryBar < 60) firstHourRT++;
   }
@@ -350,4 +414,4 @@ if (lots.length > 0 || pending.length > 0) {
 const pnl = cash - START;
 const rtPerDay = +(rts / (bars.length / 1440)).toFixed(1);
 const firstHour = firstHourRT;
-console.log(JSON.stringify({ entry: cfg.entry, tp: cfg.tp, stop: cfg.stop, maxhold: MAXHOLD, rest: REST, sizeBps: Number(SIZE), maxPos: MAXPOS, cost2x: COST2X, pnl: Number(pnl) / 1e6, trades, roundTrips: rts, rtPerDay, firstHourRT: firstHour, wins, winRate: rts ? +(wins / rts).toFixed(2) : 0, fees: Number(fees) / 1e6, maxDD: Number(maxDD) / 10000, bars: bars.length, firstBuyBar: firstBuy ? firstBuy.bar : null, firstBuyT: firstBuy ? firstBuy.t : null }));
+console.log(JSON.stringify({ entry: cfg.entry, tp: cfg.tp, stop: cfg.stop, maxhold: MAXHOLD, rest: REST, sizeBps: Number(SIZE), maxPos: MAXPOS, cost2x: COST2X, pnl: Number(pnl) / 1e6, trades, roundTrips: rts, rtPerDay, firstHourRT: firstHour, wins, winRate: rts ? +(wins / rts).toFixed(2) : 0, fees: Number(fees) / 1e6, maxDD: Number(maxDD) / 10000, bars: bars.length, firstBuyBar: firstBuy ? firstBuy.bar : null, firstBuyT: firstBuy ? firstBuy.t : null, ndRTs, ndWins, ndPnL: Number(ndPnL) / 1e6 }));
