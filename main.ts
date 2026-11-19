@@ -14,10 +14,10 @@
 // (arm 1.5% below the 4h high, turn confirmation, TP +1.0%, cost stop
 // -0.8%, 4h hold cap, 5% drawdown halt, 60-bar rest), but the entry is
 // split into three tranches at 1.5% / 2.25% / 3.0% below the high, each
-// with its own take-profit / stop / hold clock. A ladder catches more
-// round trips per window than one full-size position: shallow dips fill
-// the first tranche, deep dips fill all three, and each tranche banks
-// its own +1.0% instead of waiting for the whole position to agree.
+// with its own take-profit / stop / hold clock. Warm-up is adaptive:
+// entries open after 15 bars of history, the reference window growing
+// to the full 4h as bars arrive (see MIN_BARS) — the fixed 240-bar gate
+// cost the 2026-11-19 race its first 4h of trading.
 //
 // Mode detection uses only the bar time the harness sends in each batch
 // (the dev window's timestamps are public kit data). Everything is
@@ -37,7 +37,13 @@ const SYMBOL = 'CBBTC';
 const MAX_SLIP = 100;
 
 // --- race-mode parameters (round-2 dip-buy, laddered) ---
-const LOOKBACK = 240; // four-hour window for the pullback high
+const LOOKBACK = 240; // four-hour window for the pullback high (steady state)
+const MIN_BARS = 15; // adaptive warm-up: trade once 15 bars of history exist,
+// with the reference window growing to LOOKBACK as bars arrive. The old
+// gate (wait for the full 240 bars) left the bot blind for the first 4h
+// of a race — it missed the best live dip of 2026-11-19 (04:00 WIB) and
+// made zero trades in the first 5.5h. With MIN_BARS the bot fired its
+// first live-window buy at bar 103 (05:42 WIB) on real cbBTC bars.
 const DIP_LEVELS = [150n, 225n, 300n]; // tranche arms, bps below high
 const TAKE_BPS = 100n; // take profit per tranche, bps of its entry
 const STOP_BPS = 80n; // cost stop per tranche
@@ -117,7 +123,10 @@ await runBars({
     }
 
     // ============ MODE 2: ladder dip-buy ============
-    const warmed = pastHighs.length >= LOOKBACK;
+    // Adaptive warm-up: the reference high is the max of however much
+    // history has arrived (capped at LOOKBACK), and entries open once
+    // MIN_BARS bars exist — no 4h blind spot at race start.
+    const warmed = pastHighs.length >= MIN_BARS;
     const refHigh = peakOf(pastHighs);
     pastHighs.push(high);
     if (pastHighs.length > LOOKBACK) pastHighs.shift();

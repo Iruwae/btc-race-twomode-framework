@@ -22,6 +22,21 @@ A two-mode cbBTC bot for the 24h BTC race.
   2.25% / 3.0% below the high, each with its own take-profit, stop
   and hold clock. Shallow dips fill the first tranche, deep dips fill
   all three, and each tranche banks its own +1.0%.
+  **Warm-up is adaptive (2026-11-19 fix):** entries open after just
+  15 bars of history (`MIN_BARS`), with the reference window growing
+  to the full 4h as bars arrive. The old fixed 240-bar gate left the
+  bot blind for the first 4h of a race — in the 2026-11-19 live race
+  it missed the best dip (04:00 WIB) and made zero trades in 5.5h.
+  Validated with `tools/ladder-sim.mjs` (kit fill model) on the
+  20261118 dev window (**+$3.18**), the 20261117 dev window
+  (**+$5.21**), the 15 Nov hard-trend window (**−$0.08**), and a
+  replay of the real 2026-11-19 live window from Orca cbBTC bars
+  (**+$2.93, first buy bar 103, 05:42 WIB** — the fixed-gate bot
+  made zero trades there). No lookback variant reached +$8 on the
+  20261118 dev window (ladder ceiling ≈ +$4.3: only tranche 1 fills
+  on shallow dips, so it trades at 1/3 size) — the dev number is a
+  gate, not the prize; the live window decides, and the adaptive
+  warm-up is what trades there.
 
 Mode detection uses only the bar time in each batch (the dev window's
 timestamps are public kit data).
