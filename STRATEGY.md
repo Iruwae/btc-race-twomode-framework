@@ -15,7 +15,26 @@ multi-unit-per-bar actions).
 
 ## Mode 2 — race window (any bar after the dev window)
 
-A 3-tranche dip-buy ladder, each tranche with its own TP / stop / hold clock:
+A HYBRID: cold-start scalping for the first 30 bars, then the proven
+3-tranche dip-buy ladder. (scalp branch; validated in
+tools/scalp-sim.mjs, full tables in
+~/workspace/makefun/btc-scalp-variant-20261119.md.)
+
+### Cold start — race bars 0-29
+
+The old bot sat idle for 4h while the 04:00 dip of 2026-11-19 passed
+(first ladder buy bar 103). The hybrid trades from bar 2 on the
+opening anchor (close of race bar 0):
+
+| Signal | Rule | Size |
+|---|---|---|
+| Momentum | 2 up closes, both above the anchor | $200 equity |
+| Micro-dip turn | close below anchor −50bp, then up | $200 equity |
+| Aggressive dip | close below anchor −50bp (no turn needed), max 1 per 15 bars | $100 equity |
+
+Each cold lot: TP +1.0%, NO stop, 4h hold, 15-bar rest after exit.
+
+### Ladder — race bars 30+
 
 | Parameter | Value |
 |---|---|
@@ -25,28 +44,34 @@ A 3-tranche dip-buy ladder, each tranche with its own TP / stop / hold clock:
 | Take profit | +1.0% per tranche |
 | Cost stop | −0.8% per tranche |
 | Max hold | 240 bars (4h) per tranche |
-| Rest after full exit | 60 bars |
+| Rest after a ladder lot exits | 60 bars |
 | Circuit breaker | 5% drawdown stops trading |
 | Fees | 4bp + 2bp slippage per side (kit fill model) |
 
-### Adaptive warm-up
+Validation (kit exact fill model, net PnL after fees): hybrid OOS
+(dev17 + 15 Nov + live19) **+$17.94**, all 5 windows **+$14.21**
+(dev18 −$3.73, dev17 +$4.32, 15 Nov +$0.09, live19c +$11.90,
+live19f +$1.63); 2x-fee OOS +$10.78, all +$5.26. First buy bar 2
+on live19c (three cold lots into the 04:00 dip, all TP +1%:
++$8.66), and ≥1 first-hour trade on EVERY validation window.
 
-The bot starts cold at race start — the harness ships no warm-up bars. A
-fixed 240-bar gate made zero trades in the first 5.5h of the 20261118 race
-(including missing the −1.9% dip at 04:00 WIB). Race mode therefore trades
-once `MIN_BARS = 15` bars of history exist, with the reference window growing
-to the full 240 bars as bars arrive. Steady-state semantics are unchanged.
-
-Validation (kit exact fill model, real Orca cbBTC 1m bars): dev +$3.18,
-20261117 window +$5.21, 15 Nov hard-trend −$0.08, live 19 Nov replay +$2.93
-with a buy at bar 103 (05:42 WIB). The old 240-bar gate made 0 trades on the
-same live bars.
+Comparison (same fill model, same windows): ladder-only framework
+OOS +$8.06 / all +$11.24 / first buy bar 103; best fixed 1m scalp
+(RSI bounce, no stop) OOS +$4.96 / all −$7.91; regime-switching
+adaptive OOS +$21.72 but all +$0.69 with a −$21.03 tail on the
+V-shape dev window (rejected: one bad day wipes the race);
+tight-stop 1m scalping (mom-ema / breakout / grid, ~90 configs)
+loses on every window — fees + whipsaw. ATR-scaled TP/stop and
+trend-filtered grid both made things worse. The hybrid is the
+recommendation: best all-windows PnL, best worst window (−$3.73),
+and it trades from the opening bars.
 
 ## Known limits
 
-- Only tranche 1 (1.5%) ever fills in practice: the turn confirmation means
-  the bounce is already underway, so deeper levels rarely trigger. The ladder
-  effectively trades at 1/3 size on most days; closer levels (e.g.
-  1.5/1.75/2.0%) or scale-in without turn confirmation on deeper levels are
-  the open improvement.
+- The cold leg loses on a falling open (dev18: 3 cold lots −$7.19,
+  ladder +$4.19 → −$3.73). Bounded by the $100-200 sizes and the 4h
+  hold; the ladder leg carries the day elsewhere.
+- Only tranche 1 (1.5%) ever fills in practice on the ladder: the turn
+  confirmation means the bounce is already underway, so deeper levels
+  rarely trigger.
 - The dev score does not decide prizes. The live window does.
