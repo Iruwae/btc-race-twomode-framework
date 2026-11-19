@@ -40,7 +40,7 @@ Each cold lot: user trailing exit (see below), NO stop, 4h hold,
 | Parameter | Value |
 |---|---|
 | Reference high | 4h window (`LOOKBACK = 240` bars), growing adaptively |
-| Tranche arms | 1.0% / 1.5% / 2.0% below the reference high (user override 2026-11-19 — see note below) |
+| Tranche arms | 0.5% / 1.5% / 2.0% below the reference high (user order 2026-11-19: first buy at −0.5% — see note below) |
 | Entry | turn confirmation (close above best of prior 3 closes), fill next bar open |
 | Exit | user trailing exit (see below) — NO fixed TP |
 | Cost stop | −0.8% per tranche |
@@ -60,13 +60,13 @@ exits early (locks the small win). Hard stop −0.8% (ladder lots
 only) and the 4h hold cap are the backstops.
 
 Validation (kit exact fill model, net PnL after fees): trailing exit
-on the user ladder OOS (dev17 + 15 Nov + live19) **+$36.83**, all 5
-windows **+$32.86** (dev18 −$3.97, dev17 +$5.57, 15 Nov +$25.27,
-live19c +$0.75, live19f +$5.24); 2x-fee OOS +$25.55, all +$19.39.
+on the user ladder OOS (dev17 + 15 Nov + live19) **+$31.35**, all 5
+windows **+$21.06** (dev18 −$10.28, dev17 +$5.11, 15 Nov +$19.41,
+live19c −$0.95, live19f +$7.78); 2x-fee OOS +$18.90, all +$6.06.
 First buy bar 2 on live19c, and ≥1 first-hour trade on EVERY
-validation window. The trailing exit is what fixes the user ladder's
-trend-day tail: 15 Nov goes from −$15.80 (fixed TP) to +$25.27,
-because dip-buy lots ride their bounces instead of exiting at +1%.
+validation window. The trailing exit is what keeps the user ladder's
+trend-day tail in check: 15 Nov is +$19.41 (vs −$15.80 for the
+[100,150,200] ladder under fixed TP).
 
 > **User override (2026-11-19, "tetap pakai aturan fleksibel gua"):**
 > the ladder legs are the user's [100, 150, 200] bps even though the
@@ -77,6 +77,19 @@ because dip-buy lots ride their bounces instead of exiting at +1%.
 > the 15 Nov trend day (5 extra losing lots, −$15.80 vs +$0.09).
 > The user's rules win over the backtest — and the trailing exit
 > then repairs the tail (15 Nov +$25.27, worst window now −$3.97).
+>
+> **First buy at −0.5% (2026-11-19, "buy pertama saat turun 0.5%"):**
+> legs moved to [50, 150, 200] bps. The even-spaced alternative
+> [50, 100, 150] was tested and is worse on every aggregate —
+> OOS +$19.26 / all +$13.85 / worst −$5.42, and NEGATIVE at 2x fees
+> (all −$5.07) — vs [50, 150, 200] OOS +$31.35 / all +$21.06 /
+> worst −$10.28 (2x-fee all +$6.06). Both layouts satisfy the user's
+> order (first buy at −0.5%); the 50bp first leg still costs
+> performance vs [100, 150, 200] (OOS +$36.83 / all +$32.86 /
+> worst −$3.97), mostly on the dev18 window (−$10.28, WR 0.25 —
+> the shallow leg fires on noise) and a thinner 15 Nov tail
+> (+$19.41 vs +$25.27). Committed per the standing precedent
+> (user rules win over backtests).
 
 Comparison (same fill model, same windows): fixed-TP user ladder
 OOS +$14.71 / all +$8.28 / worst −$15.80; old-ladder hybrid
@@ -92,7 +105,7 @@ trailing-exit round: no-dip buy (buys strength into reversals,
 −$13.83 net across 19 lots, dev17 −$11.57 alone) and bounce
 confirmation (neutral: OOS +$0.05, ALL −$0.54, worst −$0.59).
 The hybrid with the user's ladder + trailing exit is the submitted
-candidate; its worst window is −$3.97 (dev18).
+candidate; its worst window is −$10.28 (dev18).
 and it trades from the opening bars.
 
 ## Known limits

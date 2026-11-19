@@ -13,7 +13,7 @@ const DS = {
   live19c: '/home/hatch/workspace/makefun/twomode-validation/live19-cbbtc-kit.ndjson',
   live19f: '/home/hatch/workspace/makefun/twomode-validation/live19-full-kit.ndjson',
 };
-const BASE = { entry: 'adaptive', postCold: 'dip', coldAggr: true, coldHold: 240, coldSize: 2000, ladLevels: [100, 150, 200] }; // user's ladder (override 2026-11-19)
+const BASE = { entry: 'adaptive', postCold: 'dip', coldAggr: true, coldHold: 240, coldSize: 2000, ladLevels: [50, 150, 200] }; // user's ladder (first buy at -0.5%)
 function run(cfg, cost2x) {
   const r = {};
   for (const [name, path] of Object.entries(DS)) {

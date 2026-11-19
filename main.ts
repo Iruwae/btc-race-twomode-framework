@@ -67,7 +67,7 @@ const MAX_SLIP = 100;
 
 // --- race-mode parameters ---
 const LOOKBACK = 240; // four-hour window for the pullback high (steady state)
-const DIP_LEVELS = [100n, 150n, 200n]; // ladder tranche arms, bps below high (user override 2026-11-19: 1% / 1.5% / 2%)
+const DIP_LEVELS = [50n, 150n, 200n]; // ladder tranche arms, bps below high (user order 2026-11-19: first buy at -0.5%; legs 2-3 kept at 1.5%/2.0% — the even-spaced [50,100,150] tested worse: OOS +$19.26 vs +$31.35, 2x-fee ALL -$5.07 vs +$6.06)
 const STOP_BPS = 80n; // cost stop, bps of entry (ladder lots only)
 const NO_STOP = 10000n; // cold lots: no stop, hold for the bounce
 const REST_LADDER = 60; // no re-entry for this long after a ladder lot exits

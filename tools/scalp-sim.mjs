@@ -86,7 +86,7 @@ let dipArmed = false;
 let ladArmed = [false, false, false], ladFilled = [false, false, false];
 let ndLastBar = -1e9; // last no-dip buy bar (cooldown)
 let ndRTs = 0, ndWins = 0, ndPnL = 0n; // no-dip buy standalone stats
-const LAD_LEVELS = cfg.ladLevels ?? [100, 150, 200]; // bps below the running high (user ladder, commit 0f84228)
+const LAD_LEVELS = cfg.ladLevels ?? [50, 150, 200]; // bps below the running high (user ladder, first buy at -0.5%)
 // Precomputed regime per bar: COLD <30 bars, else ER(30) target with
 // 3-bar persistence (a regime only takes over after 3 straight bars).
 const regimeArr = (() => {
