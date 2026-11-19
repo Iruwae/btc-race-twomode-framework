@@ -39,7 +39,7 @@ Each cold lot: TP +1.0%, NO stop, 4h hold, 15-bar rest after exit.
 | Parameter | Value |
 |---|---|
 | Reference high | 4h window (`LOOKBACK = 240` bars), growing adaptively |
-| Tranche arms | 1.5% / 2.25% / 3.0% below the reference high |
+| Tranche arms | 1.0% / 1.5% / 2.0% below the reference high (user override 2026-11-19 — see note below) |
 | Entry | turn confirmation (close above best of prior 3 closes), fill next bar open |
 | Take profit | +1.0% per tranche |
 | Cost stop | −0.8% per tranche |
@@ -49,11 +49,20 @@ Each cold lot: TP +1.0%, NO stop, 4h hold, 15-bar rest after exit.
 | Fees | 4bp + 2bp slippage per side (kit fill model) |
 
 Validation (kit exact fill model, net PnL after fees): hybrid OOS
-(dev17 + 15 Nov + live19) **+$17.94**, all 5 windows **+$14.21**
-(dev18 −$3.73, dev17 +$4.32, 15 Nov +$0.09, live19c +$11.90,
-live19f +$1.63); 2x-fee OOS +$10.78, all +$5.26. First buy bar 2
+(dev17 + 15 Nov + live19) **+$14.71**, all 5 windows **+$8.28**
+(dev18 −$6.43, dev17 +$11.48, 15 Nov −$15.80, live19c +$14.76,
+live19f +$4.27); 2x-fee OOS +$3.22, all −$5.38. First buy bar 2
 on live19c (three cold lots into the 04:00 dip, all TP +1%:
 +$8.66), and ≥1 first-hour trade on EVERY validation window.
+
+> **User override (2026-11-19, "tetap pakai aturan fleksibel gua"):**
+> the ladder legs are the user's [100, 150, 200] bps even though the
+> backtest favored [150, 225, 300] (OOS +$17.94 / all +$14.21 /
+> worst window −$3.73 vs this ladder's OOS +$14.71 / all +$8.28 /
+> worst −$15.80). The shallower arms win on ranging days (dev17
+> +$7.16, live19c +$2.86) but buy the falling knife on the 15 Nov
+> trend day (5 extra losing lots, −$15.80 vs +$0.09). The user's
+> rules win over the backtest.
 
 Comparison (same fill model, same windows): ladder-only framework
 OOS +$8.06 / all +$11.24 / first buy bar 103; best fixed 1m scalp
@@ -62,8 +71,10 @@ adaptive OOS +$21.72 but all +$0.69 with a −$21.03 tail on the
 V-shape dev window (rejected: one bad day wipes the race);
 tight-stop 1m scalping (mom-ema / breakout / grid, ~90 configs)
 loses on every window — fees + whipsaw. ATR-scaled TP/stop and
-trend-filtered grid both made things worse. The hybrid is the
-recommendation: best all-windows PnL, best worst window (−$3.73),
+trend-filtered grid both made things worse. The hybrid (with the
+user's [100, 150, 200] ladder) is the submitted candidate per the
+user's explicit override; its worst window is now −$15.80 (15 Nov
+trend day), vs −$3.73 for the [150, 225, 300] ladder.
 and it trades from the opening bars.
 
 ## Known limits

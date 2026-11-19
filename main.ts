@@ -59,7 +59,7 @@ const MAX_SLIP = 100;
 
 // --- race-mode parameters ---
 const LOOKBACK = 240; // four-hour window for the pullback high (steady state)
-const DIP_LEVELS = [150n, 225n, 300n]; // ladder tranche arms, bps below high
+const DIP_LEVELS = [100n, 150n, 200n]; // ladder tranche arms, bps below high (user override 2026-11-19: 1% / 1.5% / 2%)
 const TAKE_BPS = 100n; // take profit, bps of entry
 const STOP_BPS = 80n; // cost stop, bps of entry (ladder lots only)
 const NO_STOP = 10000n; // cold lots: no stop, hold for the bounce
